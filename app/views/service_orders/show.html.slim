@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Email:
+  = @service_order.email
+p
+  strong His name:
+  = @service_order.his_name
+p
+  strong Her name:
+  = @service_order.her_name
+p
+  strong His story:
+  = @service_order.his_story
+p
+  strong Her story:
+  = @service_order.her_story
+p
+  strong Status:
+  = @service_order.status
+
+= link_to 'Edit', edit_service_order_path(@service_order)
+'|
+= link_to 'Back', service_orders_path
