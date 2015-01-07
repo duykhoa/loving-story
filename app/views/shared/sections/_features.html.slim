@@ -1,5 +1,10 @@
 .container
   .row
-    .three.columns
-      .title
-        = icon 'home'
+    - 4.times do |i|
+      .three.columns
+        .title
+          h5
+            = icon 'home'
+            = "Feature #{i+1}"
+        .content
+          | Using Divi’s side navigation bar, your users can easily click through your long format, single page websites.
