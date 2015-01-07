@@ -20,5 +20,19 @@ section#features
   .container
     padding: 25px 0
 
+section#templates
+  background-image: asset-url('templates_background.jpg')
+  background-size: cover
+
+  @extend section#features
+
+  h3
+    text-align: center
+    color: white
+
+  .column:nth-child(even)
+    .image-wrapper
+      float: right
+
 i
   padding-right: 10px
