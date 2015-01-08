@@ -1,4 +1,5 @@
 class ServiceOrdersController < ApplicationController
+  layout 'service_order'
   before_action :set_service_order, only: [:show, :edit, :update, :destroy]
 
   # GET /service_orders
