@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe ServiceOrder, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:his_name) }
+  it { should validate_presence_of(:her_name) }
+  it { should validate_presence_of(:his_story) }
+  it { should validate_presence_of(:her_story) }
 end
