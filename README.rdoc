@@ -1,4 +1,4 @@
-!![Build Status](https://api.travis-ci.org/duykhoa/loving-story.svg)
+![Build Status](https://api.travis-ci.org/duykhoa/loving-story.svg)
 
 == README
 
