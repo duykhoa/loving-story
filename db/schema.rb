@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 20150107160103) do
     t.string   "her_name"
     t.text     "his_story"
     t.text     "her_story"
-    t.string   "status",     default: "pending"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "status",     default: 0
   end
 
 end
