@@ -71,6 +71,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'thin'
+  gem 'shoulda-matchers', require: false
 end
 
 group :test do
