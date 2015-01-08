@@ -1,4 +1,6 @@
 class Admin::ServiceOrdersController < ApplicationController
+  layout 'admin'
+
   def index
   end
 

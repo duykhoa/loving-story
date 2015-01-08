@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root to: 'service_orders#index'
   end
 
-  devise_for :admin_user
+  devise_for :admin_users
   get 'homes/index'
 
   resources :service_orders
