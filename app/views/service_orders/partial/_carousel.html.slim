@@ -1,1 +1,20 @@
-| kjckjndns
+#owl-carousel.owl-carousel.owl-theme
+  - 3.times do |i|
+    .item style=("background: url(#{asset_url("service_orders/carousel-#{i+1}.jpg")}) no-repeat center top;")
+      .overlay
+        .content
+          .name
+            | Adam
+            = icon 'heart'
+            | Eve
+          .welcome
+            | Welcome to adams' & Eves' website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events.
+          = link_to "Discover More", '#', class: "button button-primary"
+
+javascript:
+  $("#owl-carousel").owlCarousel({
+      singleItem:true,
+      autoPlay: 10000
+  });
+
+  $(".item").css("height", $(window).height())
