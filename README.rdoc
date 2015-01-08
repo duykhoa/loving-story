@@ -1,3 +1,5 @@
+!![Build Status](https://api.travis-ci.org/duykhoa/loving-story.svg)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
