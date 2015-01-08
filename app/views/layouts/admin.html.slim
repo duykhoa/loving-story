@@ -8,4 +8,11 @@ html
     = javascript_include_tag 'admin/admin'
     = csrf_meta_tags
   body
-    = yield
+    .page-header.navbar.navbar-fixed-top
+      .page-header-inner.container
+        .page-logo
+          = link_to "TenLuaWeb Admin", admin_root_path
+        .page-top
+          .top-menu
+            | SEARCH
+      = yield
