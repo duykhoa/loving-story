@@ -5,6 +5,8 @@ FactoryGirl.define do
     her_name Faker::Name.name
     his_story Faker::Lorem.paragraph
     her_story Faker::Lorem.paragraph
+    our_relationship Faker::Lorem.paragraph
+    your_name Faker::Name.name
     status ServiceOrder.statuses.fetch(:pending)
   end
 end

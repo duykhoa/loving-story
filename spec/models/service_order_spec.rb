@@ -5,6 +5,8 @@ describe ServiceOrder do
   it { should validate_presence_of(:her_name) }
   it { should validate_presence_of(:his_story) }
   it { should validate_presence_of(:her_story) }
+  it { should validate_presence_of(:our_relationship) }
+  it { should validate_presence_of(:your_name) }
 
   describe "validates status inclusion" do
     let(:service_order) { build(:service_order) }
