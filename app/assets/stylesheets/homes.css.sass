@@ -69,6 +69,49 @@ ul
         box-sizing: border-box
         border: 2px solid white
 
+  #process
+    .container
+      padding: 25px 0
+
+    .wrapper
+      text-align: center
+
+      &:nth-of-type(1)
+        text-align: left
+
+      &:nth-of-type(3)
+        text-align: right
+
+    .step
+      text-align: center
+      border-radius: 100%
+      //background: #388E3C
+      border: 2px solid #388E3C
+      //color: white
+      background: white
+      box-sizing: border-box
+      display: inline-block
+      margin: 0 auto
+      width: 100px
+      height: 100px
+      line-height: 100px
+      font-size: 3.3rem
+
+    .progress-bar
+      height: 3px
+      margin-top: 50px
+      background: white
+
+      #percentage
+        transition: width 0.3s ease-in-out
+        height: 100%
+        width: 0
+        background: #388E3C
+
+    .row.step-wrapper
+      position: relative
+      top: -50px
+
 footer
   color: #eee
   padding: 10px 0

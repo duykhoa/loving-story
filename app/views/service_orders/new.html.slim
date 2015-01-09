@@ -5,6 +5,16 @@ section#header
         .twelve.columns
           h1 Filling the form below
 
+section#process
+  .container
+    .row
+      .progress-bar
+        #percentage(data-value = 0)
+
+    .row.step-wrapper
+      - (1..3).each do |i|
+        .four.columns.wrapper
+          .step= i
 = simple_form_for @service_order do |f|
   section#form-step-1
     .container
