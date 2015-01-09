@@ -10,6 +10,17 @@
           .welcome
             | Welcome to adams' & Eves' website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events.
           = link_to "Discover More", '#', class: "button button-primary"
+nav
+  .container
+    .row
+      .two.columns.logo
+        = image_tag('service_orders/logo.png')
+      .ten.columns
+        .wrapper.u-pull-right
+          ul
+            - ["Adma & Eve", "Our family", "Big moment", "favorite list", "Our blog", "Contact"].each do |f|
+              li
+                = link_to f, "#"
 
 javascript:
   $("#owl-carousel").owlCarousel({
