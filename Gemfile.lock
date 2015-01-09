@@ -98,6 +98,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    email_validator (1.5.0)
+      activemodel
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
@@ -233,6 +235,8 @@ GEM
       rubyzip (~> 1.0)
       websocket (~> 1.0)
     sexp_processor (4.4.4)
+    shoulda-matchers (2.7.0)
+      activesupport (>= 3.0.0)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -303,7 +307,11 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
+<<<<<<< HEAD
   devise
+=======
+  email_validator
+>>>>>>> master
   factory_girl_rails
   faker
   figaro (>= 1.0.0.rc1)
@@ -323,6 +331,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
+  shoulda-matchers
   simple_form
   slim-rails
   spring

@@ -73,6 +73,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'thin'
+  gem 'shoulda-matchers', require: false
+  gem 'email_validator'
 end
 
 group :test do
