@@ -28,3 +28,16 @@ section#process
             = render 'service_orders/form/step_1', f: f
           .form-action
             = button_tag "Next", class: 'button-custom'
+
+  section#form-step-2
+    .container
+      .row
+        .four.comlumns
+          .aside#info-navigation
+            ul
+              - ["Name", "Story", "Our Relationship", "Timeline", "Photo"].each do |i|
+                li
+                  = link_to "#{i}", "#"
+
+        .eight.columns
+          p Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
