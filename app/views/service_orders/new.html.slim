@@ -32,26 +32,25 @@ section#process
   section#form-step-2
     .container
       .row
-        .three.columns
+        .two.columns
           .aside#info-navigation
             ul.info-list
               - %w(name story our_relationship timeline photo).each do |info|
                 li
                   = link_to info.humanize, "##{info}"
 
-        .nine.columns
-          .content-wraper#name
+        .ten.columns
+          .content-wrapper#name
             .row= render 'service_orders/form/step_2_name', f: f
 
-          .content-wraper#story
+          .content-wrapper#story
             .row= render 'service_orders/form/step_2_story', f: f
 
-          .content-wraper#relationship
+          .content-wrapper#relationship
             .row= render 'service_orders/form/step_2_relationship', f: f
 
-          .content-wraper
-            .row
-              .four.columns
-                = button_tag "Next", class: 'button-custom primary'
-              .four.offset-by-three.columns
-                = button_tag "Back", class: 'button-custom primary'
+          .row
+            .four.offset-by-one.columns
+              = button_tag "Previous", class: 'button-custom button-previous'
+            .four.offset-by-two.columns
+              = button_tag "Next", class: 'button-custom button-next'
