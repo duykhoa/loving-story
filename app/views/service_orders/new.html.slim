@@ -16,7 +16,7 @@ section#process
         .four.columns.wrapper
           .step= i
 = simple_form_for @service_order do |f|
-  section#form-step-1
+  section#form-step-1.hidden
     .container
       .row
         .eight.columns
@@ -32,12 +32,12 @@ section#process
   section#form-step-2
     .container
       .row
-        .four.comlumns
+        .four.columns
           .aside#info-navigation
-            ul
-              - ["Name", "Story", "Our Relationship", "Timeline", "Photo"].each do |i|
+            ul.info-list
+              - %w(name story our_relationship timeline photo).each do |info|
                 li
-                  = link_to "#{i}", "#"
+                  = link_to info.humanize, "##{info}"
 
         .eight.columns
           p Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
