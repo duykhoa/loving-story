@@ -1,0 +1,31 @@
+doctype html
+
+html
+  head
+    title Admin TenLuaWeb
+    link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet")
+    = stylesheet_link_tag    'admin/admin', media: 'all'
+    = javascript_include_tag 'admin/admin'
+    = csrf_meta_tags
+  body.page-boxed
+    .page-header.navbar.navbar-fixed-top
+      .page-header-inner.container
+        .page-logo
+          = link_to "TenLuaWeb Admin", admin_root_path
+        .page-top
+          .top-menu
+            | SEARCH
+      .clearfix
+      .container
+        .page-container
+          .page-sidebar-wrapper
+            .page-sidebar.navbar-collapse.collapse
+              ul.page-sidebar-menu.page-sidebar-menu-hover-submenu
+                li.start
+                  = link_to "#" do
+                    = icon 'home'
+                    span.title Dashboard
+
+          .page-content-wrapper
+            .page-content
+      = yield
