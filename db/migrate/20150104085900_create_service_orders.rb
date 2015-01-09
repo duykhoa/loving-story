@@ -6,7 +6,6 @@ class CreateServiceOrders < ActiveRecord::Migration
       t.string :her_name
       t.text :his_story
       t.text :her_story
-      t.string :status
 
       t.timestamps null: false
     end
