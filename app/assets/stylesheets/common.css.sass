@@ -14,7 +14,7 @@ button.button-custom
 
   &:after
     position: absolute
-    right: 5px
+    right: 10px
     line-height: 30px
     font-family: FontAwesome
     content: '\f105'
@@ -24,6 +24,16 @@ button.button-custom
     border: 2px solid transparent !important
     background: rgba(255, 255, 255, 0.2)
     padding: 7px 20px 7px 0px !important
+
+button.button-custom.primary
+  @extend button.button-custom
+
+  border: 2px solid #2ea3f2 !important
+  color: #2ea3f2 !important
+
+  &:hover
+    border: 2px solid transparent !important
+    background: rgba(0, 0, 0, 0.05)
 
 .hidden
   display: none

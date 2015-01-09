@@ -32,12 +32,26 @@ section#process
   section#form-step-2
     .container
       .row
-        .four.columns
+        .three.columns
           .aside#info-navigation
             ul.info-list
               - %w(name story our_relationship timeline photo).each do |info|
                 li
                   = link_to info.humanize, "##{info}"
 
-        .eight.columns
-          p Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+        .nine.columns
+          .content-wraper#name
+            .row= render 'service_orders/form/step_2_name', f: f
+
+          .content-wraper#story
+            .row= render 'service_orders/form/step_2_story', f: f
+
+          .content-wraper#relationship
+            .row= render 'service_orders/form/step_2_relationship', f: f
+
+          .content-wraper
+            .row
+              .four.columns
+                = button_tag "Next", class: 'button-custom primary'
+              .four.offset-by-three.columns
+                = button_tag "Back", class: 'button-custom primary'
