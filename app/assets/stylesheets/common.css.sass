@@ -25,30 +25,11 @@ button.button-custom
     background: rgba(255, 255, 255, 0.2)
     padding: 7px 20px 7px 0px !important
 
-button.button-custom.button-next
+button.button-custom.primary
   @extend button.button-custom
 
   border: 2px solid #2ea3f2 !important
   color: #2ea3f2 !important
-
-  &:hover
-    border: 2px solid transparent !important
-    background: rgba(0, 0, 0, 0.05)
-
-button.button-custom.button-previous
-  @extend button.button-custom
-
-  border: 2px solid #2ea3f2 !important
-  color: #2ea3f2 !important
-
-  &:after
-    left: -170px
-    content: '\f104'
-
-  &:hover
-    border: 2px solid transparent !important
-    background: rgba(0, 0, 0, 0.05)
-    padding: 7px 0px 7px 20px !important
 
 .hidden
   display: none
