@@ -6,6 +6,21 @@ button.button-custom
   font-weight: 400 !important
   font-size: 18px !important
   width: 100%
-  padding: 5px 0
+  padding: 7px 0
   margin-top: 17px
   height: auto
+  position: relative
+  transition: all 0.2s ease
+
+  &:after
+    position: absolute
+    right: 5px
+    line-height: 30px
+    font-family: FontAwesome
+    content: '\f105'
+    font-size: 23px
+
+  &:hover
+    border: 2px solid transparent !important
+    background: rgba(255, 255, 255, 0.2)
+    padding: 7px 20px 7px 0px !important
