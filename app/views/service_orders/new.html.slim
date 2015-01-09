@@ -1,1 +1,20 @@
 section#header
+  header
+    .container
+      .row
+        .twelve.columns
+          h1 Filling the form below
+
+= simple_form_for @service_order do |f|
+  section#form-step-1
+    .container
+      .row
+        .eight.columns
+          h1 Your information
+          h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+
+        .four.columns
+          .form-wrapper
+            = render 'service_orders/form/step_1', f: f
+          .form-action
+            = button_tag "Next"
