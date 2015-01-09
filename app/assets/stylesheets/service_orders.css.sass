@@ -1,20 +1,57 @@
 //= require owl.carousel
 //= require owl.theme
 
+@import compass
+@import skeleton
+@import normalize
 @import "font-awesome-sprockets"
 @import "font-awesome"
 @import font
-@import skeleton
-@import normalize
 
 a
   text-decoration: none
 
 .overlay
-  background: rgba(239, 106, 138, 0.3)
+  background: rgba(239, 106, 138, 0.5)
   position: relative
   width: 100%
   height: 100%
+
+.button
+  margin: 15px 0
+
+.title
+  font-family: 'Great Vibes'
+  text-align: center
+  margin: 10px 0
+  padding: 30px 0 10px 0
+
+.seperator
+  background: asset_url("service_orders/sep.png") no-repeat center center
+  width: 100%
+  height: 56px
+  margin: 0 auto
+
+.underline
+  border-bottom: 1px solid #efefef
+  position: relative
+  
+  &:after
+    content: ""
+    width: 100px
+    height: 2px
+    background: #ef6a8a
+    position: absolute
+    margin: 0 auto
+    bottom: 0
+    left: 0
+    right: 0
+
+.intro
+  margin: 10px auto
+  padding: 20px 20%
+  text-align: center
+
 
 #owl-carousel
   .owl-controls
@@ -25,6 +62,10 @@ a
 
     span
       background: white
+
+  .title
+    font-size: 8em
+    padding: 0
 
   .item
     width: 100%
@@ -38,16 +79,12 @@ a
     top: 30%
     color: white
 
-    .name
-      font-family: 'Great Vibes'
-      font-size: 8em
-
     i
       color: #f04c74
 
 nav
   padding: 10px 0
-
+  @include box-shadow(0 1px 5px #a7a7a7)
   .logo
     width: 150px
     height: 50px
@@ -63,3 +100,136 @@ nav
       display: inline-block
       margin: 0
       padding: 10px
+
+.welcome
+  .image
+    width: 300px
+    height: 300px
+    @include box-shadow(inset 0 0 0 16px rgba(255, 255, 255, 0.6))
+    background-size: cover !important
+    @include border-radius(50%)
+    @include transition(all .5s ease)
+
+    &:hover
+      @include box-shadow(none)
+      .cover
+        opacity: 1
+        @include scale(1)
+
+        .info
+          opacity: 1
+
+    .cover
+      width: 100%
+      height: 100%
+      opacity: 0
+      background: rgba(239, 106, 138, .8)
+      @include scale(0)
+      @include border-radius(50%)
+      @include transition(all .5s ease)
+
+      .info
+        position: relative
+        top: 20%
+        color: white
+        text-align: center
+        opacity: 0
+        @include transition(all .5s ease)
+
+        p
+          font-size: 13px
+          margin: 10px 10%
+          padding: 10px 0
+          border-top: 1px solid white
+
+  .male
+    background: asset_url("service_orders/man.jpg")
+
+  .female
+    background: asset_url("service_orders/woman.jpg")
+
+  .and
+    font-size: 70px
+    font-weight: bold
+    text-align: center
+    padding: 115px 0
+    color: #ef6a8a
+
+.timeline
+  .loveline
+    list-style: none
+    position: relative
+
+    li
+      position: relative
+
+      &:nth-child(even)
+        .timeline-panel
+          left: 55%
+
+        .arrow
+          position: absolute
+          top: 35px
+          left: -15px
+          border-top: 15px solid transparent
+          border-right: 15px solid #f4f4f4
+          border-left: 0 solid #f4f4f4
+          border-bottom: 15px solid transparent
+
+      &:nth-child(odd)
+        .timeline-panel
+          left: 3.5%
+
+        .arrow
+          position: absolute
+          top: 35px
+          right: -15px
+          border-top: 15px solid transparent
+          border-left: 15px solid #f4f4f4
+          border-right: 0 solid #f4f4f4
+          border-bottom: 15px solid transparent
+
+    .timeline-badge
+      position: absolute
+      top: 15px
+      left: 50%
+      margin-left: -35px
+      width: 70px
+      height: 70px
+      text-align: center
+      background: #ef6a8a
+      border: 1.5px solid #ef6a8a
+      @include border-radius(50%)
+      @include transition(all .5s ease)
+
+      i
+        padding: 25px 0 
+        font-size: 20px
+        color: white
+
+      &:hover
+        background: white
+
+        i
+          color: #ef6a8a
+
+    .timeline-panel
+      width: 40%
+      padding: 10px
+      position: relative
+      background: #f4f4f4
+      @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.175))
+
+      .heading
+        color: #ef6a8a
+        margin: 5px
+
+    &:before
+      position: absolute
+      top: 0
+      bottom: 0
+      content: ""
+      width: 3px
+      background-color: #eeeeee
+      left: 50%
+      margin-left: -1.5px
