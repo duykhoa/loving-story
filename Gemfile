@@ -64,6 +64,7 @@ group :development do
   gem 'rails_apps_testing'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
+  gem 'paperclip-dropbox'
 end
 
 group :development, :test do
