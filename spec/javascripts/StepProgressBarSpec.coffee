@@ -24,8 +24,8 @@ describe 'StepProgressBar', ->
           expect(s.__setState).toHaveBeenCalledWith('100%')
 
       describe 'invalid step number', ->
-        it "calls __setState with value 0% for step < 0", ->
-          s.setCurrentStep(-1)
+        it "calls __setState with value 0% for step <= 0", ->
+          s.setCurrentStep(0)
           expect(s.__setState).toHaveBeenCalledWith('0%')
 
         it "calls __setState with value 0% for step > @totalStep", ->
@@ -52,8 +52,8 @@ describe 'StepProgressBar', ->
           expect(s.__setState).toHaveBeenCalledWith('100%')
 
       describe 'invalid step number', ->
-        it "calls __setState with value 0% for step < 0", ->
-          s.setCurrentStep(-1)
+        it "calls __setState with value 0% for step <= 0", ->
+          s.setCurrentStep(0)
           expect(s.__setState).toHaveBeenCalledWith('0%')
 
         it "calls __setState with value 0% for step > @totalStep", ->
