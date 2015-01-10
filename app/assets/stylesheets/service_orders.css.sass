@@ -1,5 +1,6 @@
 //= require owl.carousel
 //= require owl.theme
+//= require fancybox
 
 @import compass
 @import skeleton
@@ -264,3 +265,49 @@ nav
     .owl-controls
       span
         background: #ef6a8a
+
+.memory
+  .memory-container
+    width: 100%
+    margin: 0 auto !important
+    display: table
+
+  .columns
+    margin: 0.15%
+    width: 33%
+    overflow: hidden
+
+  .img-holder
+    width: 100%
+    height: 300px
+    text-align: center
+    overflow: hidden
+    background-size: cover !important
+    background-position: 50% 50% !important
+
+    &:hover
+      .overlay
+        opacity: 1
+
+        .content
+          opacity: 1
+
+  .overlay
+    opacity: 0
+    background: rgba(0, 0, 0, 0.6)
+    @include transition(all .5s ease)
+
+    .content
+      position: relative
+      top: 30%
+      opacity: 0
+      @include transition(all .5s ease)
+      color: white
+      font-weight: bold
+
+      .name
+        font-weight: bold
+
+      .describe
+        color: #ef6a8a
+
