@@ -10,7 +10,7 @@ html
     nav
       = render 'shared/nav'
 
-    article(id= "#{controller_name}-#{action_name}")
+    article(id= controller_name)
       = yield
 
     footer
