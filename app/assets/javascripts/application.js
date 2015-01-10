@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require jquery.storageapi
 //= require StepProgressBar
+//= require skrollr
