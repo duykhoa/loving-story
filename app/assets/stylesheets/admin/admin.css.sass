@@ -4,6 +4,9 @@
 @import admin_layout
 @import grey
 
+.page-boxed
+  overflow: scroll
+
 .page-logo
   a
     color: #fefefe
@@ -11,3 +14,18 @@
     font-size: 18px
     &:hover
       text-decoration: none
+
+.page-content
+  table
+    width: 100%
+  table,th,td
+    border: 1px solid black
+    border-collapse: collapse
+  th
+    background: #555555
+    color: white
+  th,td
+    padding: 5px
+    text-align: center
+  tr:nth-child(even)
+    background: #f1f1f1

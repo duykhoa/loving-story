@@ -1,0 +1,15 @@
+<% if @user.errors.any? -%>
+  <ul class="errors">
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<% label = @user.new_record? ? "Create" : "Update" -%>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-4">
+    <button type="submit" class="btn btn-default"><%= label %></button>
+  </div>
+</div>

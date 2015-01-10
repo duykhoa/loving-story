@@ -1,4 +1,4 @@
-.page-header.navbar.navbar-fixed-top
+.page-header.navbar
   .page-header-inner.container
     .page-logo
       .row
@@ -8,33 +8,10 @@
       == render 'admin/search_form'  
       .top-menu
         == render 'admin/noti'
-  .clearfix
-  .container
-    .page-container
-      .page-sidebar-wrapper
-        == render 'admin/sidebar'
-      .page-content-wrapper
-        .page-content
-          h1 Services Order List
-          table
-            thead
-              tr
-                th Email
-                th His name
-                th Her name
-                th His story
-                th Her story
-                th Status
-                th
-                th
-                th
-            tbody
-              - @service.each do |order|
-                tr
-                  td = order.email
-                  td = order.his_name
-                  td = order.her_name
-                  td = order.his_story
-                  td = order.her_story
-                  td = order.status
-                  td = link_to 'Delete', order, data: {:confirm => 'Are you sure?'}, :method => :delete
+.clearfix
+.container
+  .page-container
+    .page-sidebar-wrapper
+      == render 'admin/sidebar'
+    .page-content-wrapper
+      == render 'admin/orders_list'
