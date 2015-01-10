@@ -130,12 +130,13 @@ ul
         border: 2px solid #7EC4F3
 
     .offset-by-one.columns
-      margin-left: 75px
+      margin-left: 80px
 
   .button-previous
     &:after
-      left: -150px
+      right: 170px
       content: '\f104'
+      font-size: 21px
 
     &:hover
       border: 2px solid transparent !important
@@ -152,8 +153,18 @@ ul
     .button-previous-step-3
       @extend .button-previous
 
+      font-size: 16px !important
+
       &:after
-        left: -90px
+        right: 105px
+
+    .button-launch
+      @extend .button-next
+
+      font-size: 16px !important
+
+      &:after
+        font-size: 21px
 
 footer
   color: #eee

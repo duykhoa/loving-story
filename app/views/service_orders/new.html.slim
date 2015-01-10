@@ -49,11 +49,12 @@ section#process
           .content-wrapper#relationship
             .row= render 'service_orders/form/step_2_relationship', f: f
 
-          .row
-            .four.offset-by-one.columns
-              = button_tag "Previous", class: 'button-custom primary button-previous'
-            .four.offset-by-two.columns
-              = button_tag "Next", class: 'button-custom primary button-next'
+          .content-wrapper
+            .row
+              .four.offset-by-one.columns
+                = button_tag "Previous", class: 'button-custom primary button-previous'
+              .four.offset-by-one.columns
+                = button_tag "Next", class: 'button-custom primary button-next'
   section#form-step-3
     .container
       .row
@@ -67,4 +68,4 @@ section#process
             .six.columns
               = button_tag "Previous", class: 'button-custom primary button-previous-step-3'
             .six.columns
-              = button_tag "Launch", class: 'button-custom primary'
+              = button_tag "Launch", class: 'button-custom primary button-launch'
