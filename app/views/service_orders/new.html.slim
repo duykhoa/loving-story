@@ -5,67 +5,68 @@ section#header
         .twelve.columns
           h1 Filling the form below
 
-section#process
-  .container
-    .row
-      .progress-bar
-        #percentage(data-value = 0)
-
-    .row.step-wrapper
-      - (1..3).each do |i|
-        .four.columns.wrapper
-          .step= i
-= simple_form_for @service_order do |f|
-  section#form-step-1
+#skrollr-body
+  section#process
     .container
       .row
-        .eight.columns
-          h1 Your information
-          h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+        .progress-bar
+          #percentage(data-value = 0)
 
-        .four.columns
-          .form-wrapper
-            = render 'service_orders/form/step_1', f: f
-          .form-action
-            = button_tag "Next", class: 'button-custom'
+      .row.step-wrapper
+        - (1..3).each do |i|
+          .four.columns.wrapper
+            .step= i
+  = simple_form_for @service_order do |f|
+    section#form-step-1
+      .container
+        .row
+          .eight.columns
+            h1 Your information
+            h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
 
-  section#form-step-2
-    .container
-      .row
-        .three.columns
-          .aside#info-navigation
-            ul.info-list
-              - %w(name story our_relationship timeline photo).each do |info|
-                li
-                  = link_to info.humanize, "##{info}"
+          .four.columns
+            .form-wrapper
+              = render 'service_orders/form/step_1', f: f
+            .form-action
+              = button_tag "Next", class: 'button-custom'
 
-        .nine.columns
-          .content-wrapper#name
-            .row= render 'service_orders/form/step_2_name', f: f
+    section#form-step-2
+      .container
+        .row
+          .three.columns
+            .aside#info-navigation
+              ul.info-list
+                - %w(name story our_relationship timeline photo).each do |info|
+                  li
+                    = link_to info.humanize, "##{info}"
 
-          .content-wrapper#story
-            .row= render 'service_orders/form/step_2_story', f: f
+          .nine.columns
+            .content-wrapper#name
+              .row= render 'service_orders/form/step_2_name', f: f
 
-          .content-wrapper#relationship
-            .row= render 'service_orders/form/step_2_relationship', f: f
+            .content-wrapper#story
+              .row= render 'service_orders/form/step_2_story', f: f
 
-          .content-wrapper
+            .content-wrapper#relationship
+              .row= render 'service_orders/form/step_2_relationship', f: f
+
+            .content-wrapper
+              .row
+                .four.offset-by-one.columns
+                  = button_tag "Previous", class: 'button-custom primary button-previous'
+                .four.offset-by-one.columns
+                  = button_tag "Next", class: 'button-custom primary button-next'
+    section#form-step-3
+      .container
+        .row
+          .eight.columns
+            h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+
+          .four.columns
+            .domain-wrapper
+              = render 'service_orders/form/step_3', f: f
             .row
-              .four.offset-by-one.columns
-                = button_tag "Previous", class: 'button-custom primary button-previous'
-              .four.offset-by-one.columns
-                = button_tag "Next", class: 'button-custom primary button-next'
-  section#form-step-3
-    .container
-      .row
-        .eight.columns
-          h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
-
-        .four.columns
-          .domain-wrapper
-            = render 'service_orders/form/step_3', f: f
-          .row
-            .six.columns
-              = button_tag "Previous", class: 'button-custom primary button-previous-step-3'
-            .six.columns
-              = button_tag "Launch", class: 'button-custom primary button-launch'
+              .six.columns
+                = button_tag "Previous", class: 'button-custom primary button-previous-step-3'
+              .six.columns
+                = button_tag "Launch", class: 'button-custom primary button-launch'
