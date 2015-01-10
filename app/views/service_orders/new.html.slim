@@ -57,11 +57,14 @@ section#process
   section#form-step-3
     .container
       .row
-        .nine.columns
+        .eight.columns
           h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
 
-        .three.columns
+        .four.columns
           .domain-wrapper
             = render 'service_orders/form/step_3', f: f
-          .launch-wrapper
-            = button_tag "Launch", class: 'button-custom primary'
+          .row
+            .six.columns
+              = button_tag "Previous", class: 'button-custom primary button-previous-step-3'
+            .six.columns
+              = button_tag "Launch", class: 'button-custom primary'
