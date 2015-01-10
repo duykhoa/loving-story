@@ -11,6 +11,16 @@
 a
   text-decoration: none
 
+body
+  text-align: center !important
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 10px 0
+
+.text-pink
+  color: #ef6a8a
+
 .overlay
   background: rgba(239, 106, 138, 0.5)
   position: relative
@@ -22,7 +32,6 @@ a
 
 .title
   font-family: 'Great Vibes'
-  text-align: center
   margin: 10px 0
   padding: 30px 0 10px 0
 
@@ -50,15 +59,12 @@ a
 .intro
   margin: 10px auto
   padding: 20px 20%
-  text-align: center
-
 
 #owl-carousel
   .owl-controls
     position: absolute
     top: 90%
     width: 100%
-    text-align: center
 
     span
       background: white
@@ -75,7 +81,6 @@ a
   .content
     width: 100%
     position: absolute
-    text-align: center !important
     top: 30%
     color: white
 
@@ -132,7 +137,6 @@ nav
         position: relative
         top: 20%
         color: white
-        text-align: center
         opacity: 0
         @include transition(all .5s ease)
 
@@ -151,9 +155,7 @@ nav
   .and
     font-size: 70px
     font-weight: bold
-    text-align: center
     padding: 115px 0
-    color: #ef6a8a
 
 .timeline
   .loveline
@@ -196,7 +198,6 @@ nav
       margin-left: -35px
       width: 70px
       height: 70px
-      text-align: center
       background: #ef6a8a
       border: 1.5px solid #ef6a8a
       @include border-radius(50%)
@@ -218,10 +219,10 @@ nav
       padding: 10px
       position: relative
       background: #f4f4f4
+      text-align: left
       @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.175))
 
       .heading
-        color: #ef6a8a
         margin: 5px
 
     &:before
@@ -233,3 +234,33 @@ nav
       background-color: #eeeeee
       left: 50%
       margin-left: -1.5px
+
+.family
+  .family-info
+    padding: 20% 0
+
+    .img-member
+      width: 50%
+      height: auto
+      margin: 10px auto
+
+      img
+        width: 100%
+        max-height: 100%
+        @include border-radius(50%)
+
+    h5
+      padding: 0
+
+  .img-couple
+    width: 100%
+    height: auto
+
+    img
+      width: 100%
+      max-height: 100%
+
+  #man-family, #woman-family
+    .owl-controls
+      span
+        background: #ef6a8a

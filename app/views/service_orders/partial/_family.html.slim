@@ -1,0 +1,48 @@
+h2.title.underline
+  | Family Members
+.intro
+  | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+.row
+  .four.columns
+    .family-info
+      h3.text-pink
+        | Adams' Family
+      span
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo
+      #man-family.owl-carousel.owl-theme
+        - mem_arr = [["Bill Swan", "Father"], ["Christina Lewis", "Mother"], ["Every Swan", "Brother"], ["Lexy wan", "Sister"]]
+        - mem_hash = mem_arr.collect{|each| Hash[%w{name appell}.zip(each)]}
+        - mem_hash.each do |h|
+          .item
+            .img-member
+              = image_tag("service_orders/family-#{mem_hash.index(h)+1}.jpg")
+            h5.text-pink
+              | #{h["name"]}
+            span
+              | #{h["appell"]}
+  .four.columns
+    .img-couple
+      = image_tag('service_orders/couple-standing.jpg')
+  .four.columns
+    .family-info
+      h3.text-pink
+        | Eves' Family
+      span
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus, leo at pretium commodo
+      #woman-family.owl-carousel.owl-theme
+        - mem_arr = [["Martin Nos", "Father"], ["Marria Grace", "Mother"], ["Every Swan", "Brother"], ["Hanna Martin", "Sister"]]
+        - mem_hash = mem_arr.collect{|each| Hash[%w{name appell}.zip(each)]}
+        - mem_hash.each do |h|
+          .item
+            .img-member
+              = image_tag("service_orders/family-#{mem_hash.index(h)+5}.jpg")
+            h5.text-pink
+              | #{h["name"]}
+            span
+              | #{h["appell"]}
+
+javascript:
+  $("#man-family, #woman-family").owlCarousel({
+      singleItem:true,
+      autoPlay: 10000
+  });
