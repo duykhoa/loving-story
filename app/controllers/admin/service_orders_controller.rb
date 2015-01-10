@@ -1,4 +1,5 @@
 class Admin::ServiceOrdersController < ApplicationController
+  before_action :authenticate_admin_user!
   before_action :set_service_order, only: [:edit, :update, :destroy]
   layout 'admin'
 
@@ -22,10 +23,7 @@ class Admin::ServiceOrdersController < ApplicationController
 
   def destroy
     @service.destroy
-    respond_to do |format|
-      format.html { redirect_to admin_service_orders_url, notice: 'Service order was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to admin_service_orders_url
   end
 
   private

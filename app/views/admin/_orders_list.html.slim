@@ -9,7 +9,7 @@
         th His story
         th Her story
         th Status
-        th
+        th Action
     tbody
       - @service.each do |order|
         tr
@@ -19,4 +19,6 @@
           td = order.his_story
           td = order.her_story
           td = order.status
-          td = link_to 'Delete', order, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td
+            = link_to 'Edit', edit_admin_service_order_path(order) 
+            = link_to 'Delete', order, data: {:confirm => 'Are you sure?'}, :method => :delete
