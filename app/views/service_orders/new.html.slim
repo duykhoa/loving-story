@@ -16,7 +16,7 @@ section#process
         .four.columns.wrapper
           .step= i
 = simple_form_for @service_order do |f|
-  section#form-step-1.hidden
+  section#form-step-1
     .container
       .row
         .eight.columns
@@ -29,17 +29,17 @@ section#process
           .form-action
             = button_tag "Next", class: 'button-custom'
 
-  section#form-step-2.hidden
+  section#form-step-2
     .container
       .row
-        .two.columns
+        .three.columns
           .aside#info-navigation
             ul.info-list
               - %w(name story our_relationship timeline photo).each do |info|
                 li
                   = link_to info.humanize, "##{info}"
 
-        .ten.columns
+        .nine.columns
           .content-wrapper#name
             .row= render 'service_orders/form/step_2_name', f: f
 
