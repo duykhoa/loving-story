@@ -11,14 +11,8 @@ class Admin::ServiceOrdersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @service.update(service_order_params)
-        format.html { redirect_to admin_service_orders_url, notice: 'Service order was successfully updated.' }
-      else
-        format.html { render :edit }
-        format.json { render json: @service.errors, status: :unprocessable_entity }
-      end
-    end
+    @service.update(service_order_params)
+    redirect_to admin_service_orders_url
   end
 
   def destroy
@@ -34,5 +28,4 @@ class Admin::ServiceOrdersController < ApplicationController
     def service_order_params
       params.require(:service_order).permit(:email, :his_name, :her_name, :his_story, :her_story, :status)
     end
-
 end
