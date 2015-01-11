@@ -5,16 +5,16 @@ h2.title.underline
 - (1..2).each do |i|
   .row
     .memory-container
-      - (1..3).each do |j|
+      - (3*(i-1)+1..3*(i-1)+3).each do |j|
         .four.columns
-          .img-holder style = ("background: url(#{asset_url("service_orders/g#{i*j}.jpg")}) center;")
+          .img-holder style = ("background: url(#{asset_url("service_orders/g#{j}.jpg")}) center;")
             .overlay
               .content 
                 .name
                   | Website Lightbox
                 .describe
                   | by GSRthemes9
-                = link_to "view more", asset_url("service_orders/g#{i*j}.jpg"), class: 'button button-primary gallery', rel: 'memory-image'
+                = link_to "view more", asset_url("service_orders/g#{j}.jpg"), class: 'button button-primary gallery', rel: 'memory-image'
 
 javascript:
   $(".gallery").fancybox({

@@ -1,0 +1,21 @@
+h2.title.underline
+  | Special Events
+.intro
+  | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+- (1..2).each do |i|
+  .container
+    .row
+      - event_arr = [["Move to our new home", "home"], ["Vietnam trip", "plane"], ["Get our new car", "car"], ["Adam got his dream job", "laptop"], ["Eve honored phd", "graduation-cap"], ["Attended Brazil Worldcup", "futbol-o"]]
+      - event_hash = event_arr.collect{|each| Hash[%w{name icon}.zip(each)]}
+      - (3*(i-1)+1..3*(i-1)+3).each do |j|
+          .four.columns
+            .event-card
+              .card-image
+                = link_to image_tag("service_orders/g#{j}.jpg"), "#"
+              .card-info
+                = link_to "#" do
+                  .heading.text-pink
+                    | #{event_hash[j-1]["name"]}
+                .info
+                  | Attribution not required but appreciated, you can share our website with your friends to offer you more quality photos.
+.seperator
