@@ -1,7 +1,16 @@
 .page-content
   h1 Editing service_order
 
-  == render 'form'
+  = simple_form_for @service, url: :admin_service_order do |f|
+    = f.input :email
+    = f.input :his_name
+    = f.input :her_name
+    = f.input :his_story
+    = f.input :her_story
+    = f.input :our_relationship
+    = f.input :your_name
+    = f.button :submit
+
 
   = link_to 'Back', admin_service_orders_path
 

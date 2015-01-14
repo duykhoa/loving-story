@@ -4,14 +4,14 @@ class Admin::ServiceOrdersController < ApplicationController
   layout 'admin'
 
   def index
-    @service = ServiceOrder.all
+    @service = ServiceOrder.order("id ASC")
   end
 
   def edit
   end
 
   def update
-    @service.update(service_order_params)
+    @service.update service_order_params
     redirect_to admin_service_orders_url
   end
 
@@ -22,7 +22,7 @@ class Admin::ServiceOrdersController < ApplicationController
 
   private
     def set_service_order
-      @service = ServiceOrder.find(params[:id])
+      @service = ServiceOrder.unscoped.find(params[:id])
     end
 
     def service_order_params
