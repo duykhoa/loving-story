@@ -12,6 +12,10 @@
 a
   text-decoration: none
 
+html, body
+  width: 100%
+  height: 100%
+
 body
   text-align: center !important
 
@@ -25,11 +29,39 @@ h1, h2, h3, h4, h5, h6
 .text-bold
   font-weight: 400
 
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
 .overlay
   background: rgba(239, 106, 138, 0.5)
   position: relative
   width: 100%
   height: 100%
+
+.icon-container
+  position: absolute
+  width: 70px
+  height: 70px
+  background: #ef6a8a
+  border: 1.5px solid #ef6a8a
+  left: 50%
+  margin-left: -35px
+  @include border-radius(50%)
+  @include transition(all .5s ease)
+
+  i
+    padding: 25px 0 
+    font-size: 20px
+    color: white
+
+  &:hover
+    background: white
+
+    i
+      color: #ef6a8a
 
 .button
   margin: 15px 0
@@ -173,6 +205,9 @@ nav
         .timeline-panel
           left: 55%
 
+          &:hover
+            margin-left: 10px
+
         .arrow
           position: absolute
           top: 35px
@@ -186,6 +221,9 @@ nav
         .timeline-panel
           left: 3.5%
 
+          &:hover
+            margin-left: -10px
+
         .arrow
           position: absolute
           top: 35px
@@ -196,27 +234,8 @@ nav
           border-bottom: 15px solid transparent
 
     .timeline-badge
-      position: absolute
+      @extend .icon-container
       top: 15px
-      left: 50%
-      margin-left: -35px
-      width: 70px
-      height: 70px
-      background: #ef6a8a
-      border: 1.5px solid #ef6a8a
-      @include border-radius(50%)
-      @include transition(all .5s ease)
-
-      i
-        padding: 25px 0 
-        font-size: 20px
-        color: white
-
-      &:hover
-        background: white
-
-        i
-          color: #ef6a8a
 
     .timeline-panel
       width: 40%
@@ -224,8 +243,8 @@ nav
       position: relative
       background: #f4f4f4
       text-align: left
-      @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.175))
-
+      @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.175))
+      @include transition(all .3s ease)
       .heading
         margin: 5px
 
@@ -262,12 +281,6 @@ nav
 
     img
       width: 100%
-      max-height: 100%
-
-  #man-family, #woman-family
-    .owl-controls
-      span
-        background: #ef6a8a
 
 .memory
   .memory-container
@@ -351,3 +364,75 @@ nav
       .info
         font-size: 13px
         font-weight: 400
+.favorite
+  .img-couple
+    width: 320px
+    height: 320px
+    margin: 0 auto
+
+    img
+      width: 100%
+      max-height: 100%
+  .favorite-name
+    .six
+      width: 50%
+    .columns
+      margin-left: 0
+
+    .name
+      font-size: 20px
+      font-weight: 400
+      width: 30%
+      color: white
+      text-transform: uppercase
+      background: #ef6a8a
+      border: 2.5px solid #fff
+      padding: 5px 0
+
+  .favorite-list
+    position: relative
+    padding: 20px 0
+
+    .row
+      padding: 10px 0
+
+    h5
+      padding: 0
+
+    .icon-container
+      position: relative
+
+    .vertical-line
+      width: 3px
+      position: absolute
+      left: 50%
+      margin-left: -1.5px
+      top: 0
+      bottom: 0
+      background: #eeeeee
+
+  .common
+    background: asset_url("service_orders/bg3.jpg") no-repeat center
+    background-size: cover
+    color: white !important
+
+    .item
+      padding: 30px 0
+
+      .icon-wrapper
+        width: 105px
+        height: 105px
+        @include border-radius(50%)
+        border: 1px solid rgba(255,255,255,0.2)
+        background: rgba(255,255,255,0.2)
+        margin: 0 auto
+        @include transition(all .5s ease)
+
+        i
+          font-size: 35px
+          padding: 35px 0
+
+        &:hover
+          background: rgba(239, 106, 138, 0.8)
+          border-color: rgba(239, 106, 138, 0.8)
+

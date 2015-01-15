@@ -1,0 +1,48 @@
+h2.title.underline
+  | Our Favourites
+.intro
+  | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+.container
+  .img-couple
+    = image_tag("service_orders/couple.jpg")
+  .row.favorite-name
+    .six.columns
+      .name.u-pull-right
+        | Adam
+    .six.columns
+      .name.u-pull-left
+        | Eve
+  .favorite-list
+    .vertical-line
+    - man_favorite = ["Pasta White Sause", "Twilight Saga", "Blue", "Dogs"]
+    - woman_favorite = ["Pizza Peproni", "Transformers", "Pink", "Cats"]
+    - icons = ["paw", "film", "paint-brush", "github-alt"]
+    - 4.times do |i|
+      .row
+        .five.columns.text-right
+          h5.text-pink
+            | #{man_favorite[i]}
+          span
+            | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
+        .two.columns
+          .icon-container
+            = icon icons[i]
+        .five.columns.text-left
+          h5.text-pink
+            | #{woman_favorite[i]}
+          span
+            | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
+.common
+  h2.title
+    | Common Favorites
+  .container
+    - (1..2).each do |i|
+      .row
+        - common_arr = [["Winter & Spring", "cloud"], ["Frank Sinatra", "microphone"], ["Maldive Islands","map-marker"], ["Your Song - Elton John", "music"], ["Dolce and Gabbana", "recycle"], ["Pride and Prejudice", "book"]]
+        - (3*(i-1)+1..3*(i-1)+3).each do |j|
+          .four.columns
+            .item
+              .icon-wrapper
+                = icon common_arr[j-1][1]
+              h5
+                | #{common_arr[j-1][0]}

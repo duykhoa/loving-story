@@ -2,8 +2,8 @@ h2.title.underline
   | Special Events
 .intro
   | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-- (1..2).each do |i|
-  .container
+.container
+  - (1..2).each do |i|
     .row
       - event_arr = [["Move to our new home", "home"], ["Vietnam trip", "plane"], ["Get our new car", "car"], ["Adam got his dream job", "laptop"], ["Eve honored phd", "graduation-cap"], ["Attended Brazil Worldcup", "futbol-o"]]
       - event_hash = event_arr.collect{|each| Hash[%w{name icon}.zip(each)]}
