@@ -70,6 +70,7 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'fakefs', :require => "fakefs/safe"
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'thin'
