@@ -20,5 +20,7 @@
           td = order.her_story
           td = order.status
           td
-            = link_to 'Edit', edit_admin_service_order_path(order) 
-            = link_to 'Delete', admin_service_order_path(order), data: {:confirm => 'Are you sure?'}, :method => :delete
+            .row
+              = link_to 'Edit', edit_admin_service_order_path(order) 
+            .row
+              = link_to 'Delete', admin_service_order_path(order), data: {:confirm => 'Are you sure?'}, :method => :delete
