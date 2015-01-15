@@ -7,7 +7,7 @@ FactoryGirl.define do
     her_story Faker::Lorem.paragraph
     our_relationship Faker::Lorem.paragraph
     your_name Faker::Name.name
-    header_image Faker::Avatar.image
+    header_image File.open("#{Rails.root}/spec/fixtures/image.jpg", 'w+')
     status ServiceOrder.statuses.fetch(:pending)
   end
 end
