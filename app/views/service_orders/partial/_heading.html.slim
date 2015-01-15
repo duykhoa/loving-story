@@ -2,14 +2,14 @@
   - 3.times do |i|
     .item style=("background: url(#{asset_url("service_orders/carousel-#{i+1}.jpg")}) no-repeat center top;")
       .overlay
-        .content
-          h1.title
-            | Adam
-            = icon 'heart'
-            | Eve
-          .welcome
-            | Welcome to adams' & Eves' website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events.
-          = link_to "Discover More", '#', class: "button button-primary"
+      .content
+        h1.title
+          | Adam
+          = icon 'heart'
+          | Eve
+        .welcome
+          | Welcome to adams' & Eves' website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events. Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
+        = link_to "Discover More", '#', class: "button button-primary"
 nav
   .container
     .row
@@ -25,7 +25,7 @@ nav
 javascript:
   $("#owl-carousel").owlCarousel({
       singleItem:true,
-      autoPlay: 10000
+      autoPlay: true
   });
 
   $(".item").css("height", $(window).height())

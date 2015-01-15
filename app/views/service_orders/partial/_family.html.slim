@@ -17,9 +17,7 @@ h2.title.underline
             .img-member
               = image_tag("service_orders/family-#{mem_hash.index(h)+1}.jpg")
             h5.text-pink
-              | #{h["name"]}
-            span
-              | #{h["appell"]}
+              | #{h["name"]} - #{h["appell"]}
   .four.columns
     .img-couple
       = image_tag('service_orders/couple-standing.jpg')
@@ -37,9 +35,7 @@ h2.title.underline
             .img-member
               = image_tag("service_orders/family-#{mem_hash.index(h)+5}.jpg")
             h5.text-pink
-              | #{h["name"]}
-            span
-              | #{h["appell"]}
+              | #{h["name"]} - #{h["appell"]}
 
 javascript:
   $("#man-family, #woman-family").owlCarousel({

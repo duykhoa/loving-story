@@ -3,59 +3,27 @@ h2.title.underline
 .intro
   | Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
 ul.loveline
-  li
-    .timeline-badge
-      = icon 'flash'
-    .timeline-panel
-      h5.heading.text-pink
-        | Our First Kiss
-      .time
-        | 24 May 2010 - By Adam
-      .describe
-        | It wasn't that long, and it certainly wasn't the kind of kiss you see in movies these days, but it was wonderful in its own way, and all I can remember about the moment is that when our lips touched, I knew the memory would last forever.
-      .arrow
-  li
-    .timeline-badge
-      = icon 'headphones'
-    .timeline-panel
-      h5.heading.text-pink
-        | Got Engaged
-      .time
-        | 20 Dec 2010 - By Eve
-      .describe
-        | Her boyfriend gives her a Mercedes, [her friends] say, 'Oh, that's nice.' But her boyfriend gives her a diamond, they say, 'Oh, he's serious.' It's not just the gift of love-it's the gift of commitment. She's not jumping up and down because she got a diamond ring but because she got a guy!
-      .arrow
-  li
-    .timeline-badge
-      = icon 'leaf'
-    .timeline-panel
-      h5.heading.text-pink
-        | Got Married
-      .time
-        | 24 May 2011 - By Adam
-      .describe
-        | Marriage has made me a lot happier and I'm deeply in love with my wife, and I thank God for her every day.
-      .arrow
-  li
-    .timeline-badge
-      = icon 'child'
-    .timeline-panel
-      h5.heading.text-pink
-        | I'm Pregnant
-      .time
-        | 12 Jan 2012 - By Eve
-      .describe
-        | Of course I can do this. I'm pregnant, not brain-damaged. My condition doesn't change my personality.
-      .arrow
-  li
-    .timeline-badge
-      = icon 'group'
-    .timeline-panel
-      h5.heading.text-pink
-        | Welcome Michael!
-      .time
-        | 1 Oct 2012 - By Adam
-      .describe
-        | Welcome Our new little family member, he is so cute and we still afraid to hurt him as we really don't have experience with newborn, excuse us Michael!
-      .arrow
+  .vertical-line
+  - event_arr = [ ["flash","Our First Kiss", "24 May 2010 - By Adam", "It wasn't that long, and it certainly wasn't the kind of kiss you see in movies these days, but it was wonderful in its own way, and all I can remember about the moment is that when our lips touched, I knew the memory would last forever."], 
+
+  ["headphones", "Got Engaged", "20 Dec 2010 - By Eve", "Her boyfriend gives her a Mercedes, [her friends] say, 'Oh, that's nice.' But her boyfriend gives her a diamond, they say, 'Oh, he's serious.' It's not just the gift of love-it's the gift of commitment. She's not jumping up and down because she got a diamond ring but because she got a guy!"],
+
+  ["leaf", "Got Married", "24 May 2011 - By Adam", "Marriage has made me a lot happier and I'm deeply in love with my wife, and I thank God for her every day."], 
+
+  ["child", "I'm Pregnant", "12 Jan 2012 - By Eve", "Of course I can do this. I'm pregnant, not brain-damaged. My condition doesn't change my personality."], 
+
+  ["group", "Welcome Michael!", "1 Oct 2012 - By Adam", "Welcome Our new little family member, he is so cute and we still afraid to hurt him as we really don't have experience with newborn, excuse us Michael!"] ]
+  
+  - event_arr.each do |e|
+    li
+      .timeline-badge
+        = icon e[0]
+      .timeline-panel
+        h5.text-pink
+          | #{e[1]}
+        .time
+          | #{e[2]}
+        .describe
+          | #{e[3]}
+        .arrow
 .seperator

@@ -1,0 +1,25 @@
+h2.title.underline
+  | Get in Touch
+.intro
+  | Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
+form
+  .row
+    .four.columns
+      = text_field "", "", placeholder: "Your Name"
+    .four.columns
+      = email_field "", "", placeholder: "Email"
+    .four.columns
+      = text_field "", "", placeholder: "Phone"
+  .row
+    = text_area "", "", placeholder: "Message", rows: "10"
+  = submit_tag "Submit message", class: "button button-primary"
+.author
+  .row
+    .six.columns
+      | Copyright &copy; 2014 Ben template. All rights reserved.
+    .six.columns
+      ul.list-icon
+        - %w(rss youtube skype linkedin twitter facebook).each do |i|
+          li
+            = link_to "#" do
+              = icon i

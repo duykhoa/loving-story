@@ -9,9 +9,6 @@
 @import "font-awesome"
 @import font
 
-a
-  text-decoration: none
-
 html, body
   width: 100%
   height: 100%
@@ -22,6 +19,9 @@ body
 h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 10px 0
+
+a
+  text-decoration: none
 
 .text-pink
   color: #ef6a8a
@@ -41,14 +41,20 @@ h1, h2, h3, h4, h5, h6
   width: 100%
   height: 100%
 
-.icon-container
+.vertical-line
+  width: 3px
   position: absolute
+  left: 50%
+  margin-left: -1.5px
+  top: 0
+  bottom: 0
+  background: #eeeeee
+
+.icon-container
   width: 70px
   height: 70px
   background: #ef6a8a
   border: 1.5px solid #ef6a8a
-  left: 50%
-  margin-left: -35px
   @include border-radius(50%)
   @include transition(all .5s ease)
 
@@ -64,12 +70,16 @@ h1, h2, h3, h4, h5, h6
       color: #ef6a8a
 
 .button
-  margin: 15px 0
+  margin: 10px 0
+  @include border-radius(0 !important)
 
 .title
   font-family: 'Great Vibes'
   margin: 10px 0
   padding: 30px 0 10px 0
+
+.intro
+  padding: 30px 20%
 
 .seperator
   background: asset_url("service_orders/sep.png") no-repeat center center
@@ -87,45 +97,49 @@ h1, h2, h3, h4, h5, h6
     height: 2px
     background: #ef6a8a
     position: absolute
-    margin: 0 auto
     bottom: 0
-    left: 0
-    right: 0
-
-.intro
-  margin: 10px auto
-  padding: 20px 20%
+    left: 50%
+    margin-left: -50px
 
 #owl-carousel
   .owl-controls
+    width: 100%
     position: absolute
     top: 90%
-    width: 100%
 
     span
       background: white
 
-  .title
-    font-size: 8em
-    padding: 0
-
   .item
     width: 100%
-    height: auto
     background-size: cover !important
 
   .content
     width: 100%
     position: absolute
-    top: 30%
+    top: 25%
     color: white
+
+    .title
+      font-size: 8em
+      padding: 0
+
+    .welcome
+      font-size: 18px
+      padding: 0 15%
 
     i
       color: #f04c74
 
+  .button
+    height: auto
+    padding: 5px 30px
+    margin: 30px auto
+
 nav
   padding: 10px 0
   @include box-shadow(0 1px 5px #a7a7a7)
+
   .logo
     width: 150px
     height: 50px
@@ -133,6 +147,7 @@ nav
     img
       width: 100%
       max-height: 100%
+
   ul
     list-style: none
     margin: 0
@@ -157,9 +172,6 @@ nav
         opacity: 1
         @include scale(1)
 
-        .info
-          opacity: 1
-
     .cover
       width: 100%
       height: 100%
@@ -173,7 +185,6 @@ nav
         position: relative
         top: 20%
         color: white
-        opacity: 0
         @include transition(all .5s ease)
 
         p
@@ -201,7 +212,7 @@ nav
     li
       position: relative
 
-      &:nth-child(even)
+      &:nth-child(odd)
         .timeline-panel
           left: 55%
 
@@ -217,7 +228,7 @@ nav
           border-left: 0 solid #f4f4f4
           border-bottom: 15px solid transparent
 
-      &:nth-child(odd)
+      &:nth-child(even)
         .timeline-panel
           left: 3.5%
 
@@ -235,7 +246,10 @@ nav
 
     .timeline-badge
       @extend .icon-container
+      position: absolute
       top: 15px
+      left: 50%
+      margin-left: -35px
 
     .timeline-panel
       width: 40%
@@ -245,18 +259,9 @@ nav
       text-align: left
       @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.175))
       @include transition(all .3s ease)
-      .heading
-        margin: 5px
 
-    &:before
-      position: absolute
-      top: 0
-      bottom: 0
-      content: ""
-      width: 3px
-      background-color: #eeeeee
-      left: 50%
-      margin-left: -1.5px
+      .time
+        padding: 5px 0
 
 .family
   .family-info
@@ -281,6 +286,7 @@ nav
 
     img
       width: 100%
+      max-height: 100%
 
 .memory
   .memory-container
@@ -327,8 +333,6 @@ nav
       .describe
         color: #ef6a8a
 
-      .button
-        @include border-radius(0)
 .event
   .event-card
     width: 100%
@@ -364,6 +368,7 @@ nav
       .info
         font-size: 13px
         font-weight: 400
+
 .favorite
   .img-couple
     width: 320px
@@ -373,6 +378,7 @@ nav
     img
       width: 100%
       max-height: 100%
+
   .favorite-name
     .six
       width: 50%
@@ -401,15 +407,8 @@ nav
 
     .icon-container
       position: relative
-
-    .vertical-line
-      width: 3px
-      position: absolute
       left: 50%
-      margin-left: -1.5px
-      top: 0
-      bottom: 0
-      background: #eeeeee
+      margin-left: -35px
 
   .common
     background: asset_url("service_orders/bg3.jpg") no-repeat center
@@ -433,6 +432,43 @@ nav
           padding: 35px 0
 
         &:hover
-          background: rgba(239, 106, 138, 0.8)
-          border-color: rgba(239, 106, 138, 0.8)
+          background: rgba(255,255,255,0.5)
+          border-color: rgba(255,255,255,0.5)
+footer
+  form
+    padding: 20px 5%
 
+    input[type="text"], input[type="email"], textarea
+      width: 100%
+      height: 50px
+      margin: 10px 0
+      @include border-radius(0)
+
+    textarea
+      height: auto
+
+    .button
+      height: 50px
+
+  .author
+    padding: 5px 5%
+    text-align: left
+    @include box-shadow(0 -1px 5px #a7a7a7)
+    color: #a7a7a7
+    background: asset_url("service_orders/pattern.png") repeat center center
+
+    .list-icon
+      list-style: none
+      margin: 0
+
+      li
+        display: inline-block
+        float: right
+        margin: 0 5px
+
+        a
+          color: #ef6a8a
+          font-size: 16px
+
+          &:hover
+            color: #a7a7a7
