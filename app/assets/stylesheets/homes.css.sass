@@ -10,41 +10,167 @@ ul
     margin: 0
     padding: 0 10px
 
-header
-  background-image: asset-url('header_image.jpg')
-  height: 800px
-  width: 100%
-  background-size: cover
+#homes
+  header
+    background-image: asset-url('header_image.jpg')
+    height: 800px
+    width: 100%
+    background-size: cover
 
-section#features
+  section#features
+    .container
+      padding: 25px 0
+
+  section#templates
+    background-image: asset-url('templates_background.jpg')
+    background-size: cover
+
+    @extend section#features
+
+    h3
+      text-align: center
+      color: white
+
+    .column:nth-child(even)
+      .image-wrapper
+        float: right
+
+  section#commitments
+    background-image: asset-url('commitment_background.jpg')
+    background-size: cover
+    height: 300px
+
+    h3
+      text-align: center
+      color: white
+      top: 50%
+
+    @extend section#features
+
+#service_orders
+  header
+    background-image: asset-url('commitment_background.jpg')
+    background-size: cover
+    height: 126px
+
   .container
-    padding: 25px 0
+    padding: 25px 50px
 
-section#templates
-  background-image: asset-url('templates_background.jpg')
-  background-size: cover
+    h1
+      color: white
 
-  @extend section#features
+  #form-step-1
+    .container
+      background: #8C43F2
 
-  h3
-    text-align: center
-    color: white
+      h1, h5
+        color: white
 
-  .column:nth-child(even)
-    .image-wrapper
-      float: right
+      .input-fields
+        margin-top: 25px
 
-section#commitments
-  background-image: asset-url('commitment_background.jpg')
-  background-size: cover
-  height: 300px
+      input, textarea
+        margin-top: 17px
+        width: 100%
+        padding: 22px 4%
+        font-size: 16px
 
-  h3
-    text-align: center
-    color: white
-    top: 50%
+  #process
+    .container
+      height: 125px
+      padding: 10px 0
+      padding-bottom: 0
 
-  @extend section#features
+    .wrapper
+      text-align: center
+
+      &:nth-of-type(1)
+        text-align: left
+
+      &:nth-of-type(3)
+        text-align: right
+
+    .step
+      text-align: center
+      border-radius: 100%
+      border: 2px solid #388E3C
+      background: white
+      box-sizing: border-box
+      display: inline-block
+      margin: 0 auto
+      width: 76px
+      height: 76px
+      line-height: 76px
+      font-size: 3.3rem
+
+    .progress-bar
+      height: 3px
+      margin-top: 50px
+      background: #EEE
+
+      #percentage
+        transition: width 0.3s ease-in-out
+        height: 100%
+        width: 0
+        background: #388E3C
+
+    .row.step-wrapper
+      position: relative
+      top: -38px
+
+  #form-step-2
+    ul.info-list
+      li
+        display: block
+
+    .content-wrapper
+      padding: 5px
+      text-align: center
+
+      input, textarea
+        width: 100%
+        height: auto
+        padding: 15px 3%
+        border: 2px solid #7EC4F3
+
+    .offset-by-one.columns
+      margin-left: 80px
+
+  .button-previous
+    &:after
+      right: 170px
+      content: '\f104'
+      font-size: 21px
+
+    &:hover
+      border: 2px solid transparent !important
+      background: rgba(0, 0, 0, 0.05)
+      padding: 7px 0px 7px 20px !important
+
+  .button-next
+    &:hover
+      border: 2px solid transparent !important
+      background: rgba(0, 0, 0, 0.05)
+
+
+  #form-step-3
+    .button-previous-step-3
+      @extend .button-previous
+
+      font-size: 16px !important
+
+      &:after
+        right: 105px
+
+    .button-launch
+      @extend .button-next
+
+      font-size: 16px !important
+
+      &:after
+        font-size: 21px
+    input
+      border: 2px solid #7EC4F3
 
 footer
   color: #eee
@@ -60,3 +186,6 @@ footer
 
 i
   padding-right: 10px
+
+a
+  text-decoration: none

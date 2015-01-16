@@ -7,3 +7,5 @@ addons:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - bundle exec rake db:create:all
+after_script:
+  - RAILS_ENV=test bundle exec rake spec:javascript

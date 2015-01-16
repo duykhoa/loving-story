@@ -7,4 +7,11 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = yield
+    nav
+      = render 'shared/nav'
+
+    article(id= controller_name)
+      = yield
+
+    footer
+      = render 'shared/footer'
