@@ -1,0 +1,26 @@
+.page-content
+  h1 Services Order List
+  table
+    thead
+      tr
+        th Email
+        th His name
+        th Her name
+        th His story
+        th Her story
+        th Status
+        th Action
+    tbody
+      - @service.each do |order|
+        tr
+          td = order.email
+          td = order.his_name
+          td = order.her_name
+          td = order.his_story
+          td = order.her_story
+          td = order.status
+          td
+            .row
+              = link_to 'Edit', edit_admin_service_order_path(order) 
+            .row
+              = link_to 'Delete', admin_service_order_path(order), data: {:confirm => 'Are you sure?'}, :method => :delete

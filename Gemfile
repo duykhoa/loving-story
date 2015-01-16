@@ -22,6 +22,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'font-awesome-sass', '~> 4.2.0'
+# Gem for admin site
+gem 'devise'
+#
+gem "admin_view"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,35 @@
+@import "font-awesome-sprockets"
+@import "font-awesome"
+@import admin_components
+@import admin_layout
+@import grey
+
+.page-boxed
+  overflow: scroll
+
+.page-logo
+  a
+    color: #fefefe
+    margin-right: 20px
+    font-size: 18px
+    &:hover
+      text-decoration: none
+
+.page-content
+  table
+    width: 100%
+  table,th,td
+    border: 1px solid black
+    border-collapse: collapse
+  th
+    background: #555555
+    color: white
+  th,td
+    padding: 5px
+    text-align: center
+  tr:nth-child(even)
+    background: #e8e8e8
+
+.sign-out
+  a
+    font-size: 20px
