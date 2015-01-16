@@ -6,6 +6,7 @@ class ServiceOrdersController < ApplicationController
   # GET /service_orders.json
   def index
     @service_orders = ServiceOrder.all
+    @service_order = ServiceOrder.first
   end
 
   # GET /service_orders/1

@@ -14,35 +14,32 @@ h2.title.underline
         | Eve
   .favorite-list
     .vertical-line
-    - man_favorite = ["Pasta White Sause", "Twilight Saga", "Blue", "Dogs"]
-    - woman_favorite = ["Pizza Peproni", "Transformers", "Pink", "Cats"]
-    - icons = ["paw", "film", "paint-brush", "github-alt"]
     - 4.times do |i|
       .row
         .five.columns.text-right
           h5.text-pink
-            | #{man_favorite[i]}
+            | #{ServiceOrdersHelper.get_favorite[:male_favorite][i]}
           span
             | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
         .two.columns
           .icon-container
-            = icon icons[i]
+            = icon ServiceOrdersHelper.get_favorite[:icon][i]
         .five.columns.text-left
           h5.text-pink
-            | #{woman_favorite[i]}
+            | #{ServiceOrdersHelper.get_favorite[:female_favorite][i]}
           span
             | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
 .common
   h2.title
     | Common Favorites
   .container
-    - (1..2).each do |i|
+    - 2.times do |i|
       .row
-        - common_arr = [["Winter & Spring", "cloud"], ["Frank Sinatra", "microphone"], ["Maldive Islands","map-marker"], ["Your Song - Elton John", "music"], ["Dolce and Gabbana", "recycle"], ["Pride and Prejudice", "book"]]
-        - (3*(i-1)+1..3*(i-1)+3).each do |j|
+        - 3.times do |j|
           .four.columns
             .item
               .icon-wrapper
-                = icon common_arr[j-1][1]
+                = icon ServiceOrdersHelper.get_favorite[:common_favorite][i][j][1]
               h5
-                | #{common_arr[j-1][0]}
+                | #{ServiceOrdersHelper.get_favorite[:common_favorite][i][j][0]}
+                
