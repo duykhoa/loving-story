@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admin do resources :users end
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   namespace :admin do
     resources :service_orders, only: [:index, :edit, :update, :destroy]
     root to: 'service_orders#index'
@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   resources :service_orders
 
+  match '/' => 'service_orders#show', :constraints => { :subdomain => /.+.4ever/ }, via: [:get]
   root to: 'homes#index'
 end

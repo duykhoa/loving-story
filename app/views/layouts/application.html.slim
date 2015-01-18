@@ -3,8 +3,15 @@ doctype html
 html
   head
     title LoveStory
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
   body
-    = yield
+    nav
+      = render 'shared/nav'
+
+    article(id= controller_name)
+      = yield
+
+    footer
+      = render 'shared/footer'

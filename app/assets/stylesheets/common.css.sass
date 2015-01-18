@@ -1,0 +1,35 @@
+button.button-custom
+  box-sizing: border-box
+  border: 2px solid white !important
+  color: white !important
+  text-transform: none !important
+  font-weight: 400 !important
+  font-size: 18px !important
+  width: 100%
+  padding: 7px 0
+  margin-top: 17px
+  height: auto
+  position: relative
+  transition: all 0.2s ease
+
+  &:after
+    position: absolute
+    right: 10px
+    line-height: 30px
+    font-family: FontAwesome
+    content: '\f105'
+    font-size: 23px
+
+  &:hover
+    border: 2px solid transparent !important
+    background: rgba(255, 255, 255, 0.2)
+    padding: 7px 20px 7px 0px !important
+
+button.button-custom.primary
+  @extend button.button-custom
+
+  border: 2px solid #2ea3f2 !important
+  color: #2ea3f2 !important
+
+.hidden
+  display: none

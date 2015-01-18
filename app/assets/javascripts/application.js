@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery.storageapi
+//= require StepProgressBar
+//= require skrollr
+//= require homes
