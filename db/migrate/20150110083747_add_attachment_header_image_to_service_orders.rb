@@ -1,8 +1,6 @@
 class AddAttachmentHeaderImageToServiceOrders < ActiveRecord::Migration
   def self.up
-    change_table :service_orders do |t|
-      t.attachment :header_image
-    end
+    add_attachment :service_orders, :header_image
   end
 
   def self.down

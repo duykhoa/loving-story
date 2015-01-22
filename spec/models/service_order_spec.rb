@@ -8,12 +8,6 @@ describe ServiceOrder do
   it { should validate_presence_of(:our_relationship) }
   it { should validate_presence_of(:your_name) }
   it { should have_attached_file(:header_image) }
-  # it { should validate_attachment_presence(:header_image) }
-  it { should validate_attachment_content_type(:header_image).
-          allowing('image/png', 'image/gif', 'image/jpg').
-          rejecting('text/plain', 'text/xml') }
-  # it { should validate_attachment_size(:header_image).
-  #         less_than(2.megabytes) }
 
   describe "validates status inclusion" do
     let(:service_order) { build(:service_order) }

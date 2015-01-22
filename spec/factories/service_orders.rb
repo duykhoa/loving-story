@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
   factory :service_order do
     email Faker::Internet.email
@@ -7,7 +9,7 @@ FactoryGirl.define do
     her_story Faker::Lorem.paragraph
     our_relationship Faker::Lorem.paragraph
     your_name Faker::Name.name
-    header_image File.open("#{Rails.root}/spec/fixtures/image.jpg", 'w+')
     status ServiceOrder.statuses.fetch(:pending)
+    header_image Faker::Avatar.image
   end
 end
