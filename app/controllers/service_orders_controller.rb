@@ -1,4 +1,5 @@
 class ServiceOrdersController < ApplicationController
+  layout 'service_orders'
   include ServiceOrdersControllerConcern
 
   before_action :set_service_order, only: [:edit, :update, :destroy]
@@ -18,6 +19,7 @@ class ServiceOrdersController < ApplicationController
   # GET /service_orders/new
   def new
     @service_order = ServiceOrder.new
+    render layout: "application"
   end
 
   # GET /service_orders/1/edit
