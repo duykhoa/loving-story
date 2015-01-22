@@ -8,8 +8,8 @@ html
 
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  body
-    nav
+  body#skrollr-body
+    nav data-0p = "background: rgba(255, 255, 255, 0)" data-30p= "background: rgba(255, 255, 255, 1)"
       = render 'shared/nav'
 
     article(id= controller_name)

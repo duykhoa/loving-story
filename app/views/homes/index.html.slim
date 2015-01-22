@@ -1,15 +1,15 @@
 .content-wrapper-100p
 
-section#header.content-wrapper-100p.fixed
+section#header.content-wrapper-100p.fixed data-0p = "top: 0%" data-100p = "top: -100%"
   = render 'shared/sections/header'
 
-section#features
+section#features.content-wrapper-50p
   = render 'shared/sections/features'
 
 .content-wrapper-100p
 
-/section#templates
-  /= render 'shared/sections/templates'
+section#templates.content-wrapper-100p.fixed
+  = render 'shared/sections/templates'
 
 /section#commitments
   /= render 'shared/sections/commitments'
