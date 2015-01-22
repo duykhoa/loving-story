@@ -12,11 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-<<<<<<< HEAD
-//= require turbolinks
-=======
 //= require jquery.storageapi
 //= require StepProgressBar
 //= require skrollr
 //= require homes
->>>>>>> master
