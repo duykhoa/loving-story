@@ -1,4 +1,6 @@
 nav
+  position: static
+  width: 100%
   padding: 25px 0
 
 ul
@@ -10,43 +12,10 @@ ul
     margin: 0
     padding: 0 10px
 
+html, body, article
+  height: 100%
+
 #homes
-  header
-    background-image: asset-url('header_image.jpg')
-    height: 800px
-    width: 100%
-    background-size: cover
-
-  section#features
-    .container
-      padding: 25px 0
-
-  section#templates
-    background-image: asset-url('templates_background.jpg')
-    background-size: cover
-
-    @extend section#features
-
-    h3
-      text-align: center
-      color: white
-
-    .column:nth-child(even)
-      .image-wrapper
-        float: right
-
-  section#commitments
-    background-image: asset-url('commitment_background.jpg')
-    background-size: cover
-    height: 300px
-
-    h3
-      text-align: center
-      color: white
-      top: 50%
-
-    @extend section#features
-
 footer
   color: #eee
   padding: 10px 0
