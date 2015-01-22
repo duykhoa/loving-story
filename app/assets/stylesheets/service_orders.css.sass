@@ -1,0 +1,474 @@
+//= require owl.carousel
+//= require owl.theme
+//= require fancybox
+
+@import compass
+@import skeleton
+@import normalize
+@import "font-awesome-sprockets"
+@import "font-awesome"
+@import font
+
+html, body
+  width: 100%
+  height: 100%
+
+body
+  text-align: center !important
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 10px 0
+
+a
+  text-decoration: none
+
+.text-pink
+  color: #ef6a8a
+
+.text-bold
+  font-weight: 400
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+.overlay
+  background: rgba(239, 106, 138, 0.5)
+  position: relative
+  width: 100%
+  height: 100%
+
+.vertical-line
+  width: 3px
+  position: absolute
+  left: 50%
+  margin-left: -1.5px
+  top: 0
+  bottom: 0
+  background: #eeeeee
+
+.icon-container
+  width: 70px
+  height: 70px
+  background: #ef6a8a
+  border: 1.5px solid #ef6a8a
+  @include border-radius(50%)
+  @include transition(all .5s ease)
+
+  i
+    padding: 25px 0 
+    font-size: 20px
+    color: white
+
+  &:hover
+    background: white
+
+    i
+      color: #ef6a8a
+
+.button
+  margin: 10px 0
+  @include border-radius(0 !important)
+
+.title
+  font-family: 'Great Vibes'
+  margin: 10px 0
+  padding: 30px 0 10px 0
+
+.intro
+  padding: 30px 20%
+
+.seperator
+  background: asset_url("service_orders/sep.png") no-repeat center center
+  width: 100%
+  height: 56px
+  margin: 0 auto
+
+.underline
+  border-bottom: 1px solid #efefef
+  position: relative
+  
+  &:after
+    content: ""
+    width: 100px
+    height: 2px
+    background: #ef6a8a
+    position: absolute
+    bottom: 0
+    left: 50%
+    margin-left: -50px
+
+#owl-carousel
+  .owl-controls
+    width: 100%
+    position: absolute
+    top: 90%
+
+    span
+      background: white
+
+  .item
+    width: 100%
+    background-size: cover !important
+
+  .content
+    width: 100%
+    position: absolute
+    top: 25%
+    color: white
+
+    .title
+      font-size: 8em
+      padding: 0
+
+    .welcome
+      font-size: 18px
+      padding: 0 15%
+
+    i
+      color: #f04c74
+
+  .button
+    height: auto
+    padding: 5px 30px
+    margin: 30px auto
+
+nav
+  padding: 10px 0
+  @include box-shadow(0 1px 5px #a7a7a7)
+
+  .logo
+    width: 150px
+    height: 50px
+
+    img
+      width: 100%
+      max-height: 100%
+
+  ul
+    list-style: none
+    margin: 0
+
+    li
+      display: inline-block
+      margin: 0
+      padding: 10px
+
+.welcome
+  .image
+    width: 300px
+    height: 300px
+    @include box-shadow(inset 0 0 0 16px rgba(255, 255, 255, 0.6))
+    background-size: cover !important
+    @include border-radius(50%)
+    @include transition(all .5s ease)
+
+    &:hover
+      @include box-shadow(none)
+      .cover
+        opacity: 1
+        @include scale(1)
+
+    .cover
+      width: 100%
+      height: 100%
+      opacity: 0
+      background: rgba(239, 106, 138, .8)
+      @include scale(0)
+      @include border-radius(50%)
+      @include transition(all .5s ease)
+
+      .info
+        position: relative
+        top: 20%
+        color: white
+        @include transition(all .5s ease)
+
+        p
+          font-size: 13px
+          margin: 10px 10%
+          padding: 10px 0
+          border-top: 1px solid white
+
+  .male
+    background: asset_url("service_orders/man.jpg")
+
+  .female
+    background: asset_url("service_orders/woman.jpg")
+
+  .and
+    font-size: 70px
+    font-weight: bold
+    padding: 115px 0
+
+.timeline
+  .loveline
+    list-style: none
+    position: relative
+
+    li
+      position: relative
+
+      &:nth-child(odd)
+        .timeline-panel
+          left: 55%
+
+          &:hover
+            margin-left: 10px
+
+        .arrow
+          position: absolute
+          top: 35px
+          left: -15px
+          border-top: 15px solid transparent
+          border-right: 15px solid #f4f4f4
+          border-left: 0 solid #f4f4f4
+          border-bottom: 15px solid transparent
+
+      &:nth-child(even)
+        .timeline-panel
+          left: 3.5%
+
+          &:hover
+            margin-left: -10px
+
+        .arrow
+          position: absolute
+          top: 35px
+          right: -15px
+          border-top: 15px solid transparent
+          border-left: 15px solid #f4f4f4
+          border-right: 0 solid #f4f4f4
+          border-bottom: 15px solid transparent
+
+    .timeline-badge
+      @extend .icon-container
+      position: absolute
+      top: 15px
+      left: 50%
+      margin-left: -35px
+
+    .timeline-panel
+      width: 40%
+      padding: 10px 10px 20px 10px
+      position: relative
+      background: #f4f4f4
+      text-align: left
+      @include box-shadow(0 5px 15px rgba(0, 0, 0, 0.175))
+      @include transition(all .3s ease)
+
+      .time
+        padding: 5px 0
+
+.family
+  .family-info
+    padding: 20% 0
+
+    .img-member
+      width: 50%
+      height: auto
+      margin: 10px auto
+
+      img
+        width: 100%
+        max-height: 100%
+        @include border-radius(50%)
+
+    h5
+      padding: 0
+
+  .img-couple
+    width: 100%
+    height: auto
+
+    img
+      width: 100%
+      max-height: 100%
+
+.memory
+  .memory-container
+    width: 100%
+    margin: 0 auto !important
+    display: table
+
+  .columns
+    margin: 0.15%
+    width: 33%
+    overflow: hidden
+
+  .img-holder
+    width: 100%
+    height: 300px
+    text-align: center
+    overflow: hidden
+    background-size: cover !important
+    background-position: 50% 50% !important
+
+    &:hover
+      .overlay
+        opacity: 1
+
+        .content
+          opacity: 1
+
+  .overlay
+    opacity: 0
+    background: rgba(0, 0, 0, 0.6)
+    @include transition(all .5s ease)
+
+    .content
+      position: relative
+      top: 30%
+      opacity: 0
+      @include transition(all .5s ease)
+      color: white
+      font-weight: bold
+
+      .name
+        font-weight: bold
+
+      .describe
+        color: #ef6a8a
+
+.event
+  .event-card
+    width: 100%
+    overflow: hidden
+    margin: 20px 0
+    padding-bottom: 30px
+    border: 1px solid rgba(0,0,0,0.1)
+    @include box-shadow(0 8px 15px rgba(0,0,0,0.1))
+    @include transition(all .3s ease)
+
+    &:hover
+      @include scale(1.05)
+
+    .card-image
+      width: 100%
+      height: 100%
+      overflow: hidden
+
+      img
+        width: 100%
+        max-height: 100%
+
+    .card-info
+      color: #687177
+      padding: 10px
+      text-align: left
+
+      .heading
+        font-size: 15px
+        font-weight: 400
+        padding: 10px 0
+
+      .info
+        font-size: 13px
+        font-weight: 400
+
+.favorite
+  .img-couple
+    width: 320px
+    height: 320px
+    margin: 0 auto
+
+    img
+      width: 100%
+      max-height: 100%
+
+  .favorite-name
+    .six
+      width: 50%
+    .columns
+      margin-left: 0
+
+    .name
+      font-size: 20px
+      font-weight: 400
+      width: 30%
+      color: white
+      text-transform: uppercase
+      background: #ef6a8a
+      border: 2.5px solid #fff
+      padding: 5px 0
+
+  .favorite-list
+    position: relative
+    padding: 20px 0
+
+    .row
+      padding: 10px 0
+
+    h5
+      padding: 0
+
+    .icon-container
+      position: relative
+      left: 50%
+      margin-left: -35px
+
+  .common
+    background: asset_url("service_orders/bg3.jpg") no-repeat center
+    background-size: cover
+    color: white !important
+
+    .item
+      padding: 30px 0
+
+      .icon-wrapper
+        width: 105px
+        height: 105px
+        @include border-radius(50%)
+        border: 1px solid rgba(255,255,255,0.2)
+        background: rgba(255,255,255,0.2)
+        margin: 0 auto
+        @include transition(all .5s ease)
+
+        i
+          font-size: 35px
+          padding: 35px 0
+
+        &:hover
+          background: rgba(255,255,255,0.5)
+          border-color: rgba(255,255,255,0.5)
+footer
+  form
+    padding: 20px 5%
+
+    input[type="text"], input[type="email"], textarea
+      width: 100%
+      height: 50px
+      margin: 10px 0
+      @include border-radius(0)
+
+    textarea
+      height: auto
+
+    .button
+      height: 50px
+
+  .author
+    padding: 5px 5%
+    text-align: left
+    @include box-shadow(0 -1px 5px #a7a7a7)
+    color: #a7a7a7
+    background: asset_url("service_orders/pattern.png") repeat center center
+
+    .list-icon
+      list-style: none
+      margin: 0
+
+      li
+        display: inline-block
+        float: right
+        margin: 0 5px
+
+        a
+          color: #ef6a8a
+          font-size: 16px
+
+          &:hover
+            color: #a7a7a7

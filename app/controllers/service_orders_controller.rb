@@ -1,13 +1,19 @@
 class ServiceOrdersController < ApplicationController
+<<<<<<< HEAD
+  layout 'service_orders'
+  before_action :set_service_order, only: [:show, :edit, :update, :destroy]
+=======
   include ServiceOrdersControllerConcern
 
   before_action :set_service_order, only: [:edit, :update, :destroy]
   before_action :set_service_order_for_show_action, only: [:show]
+>>>>>>> master
 
   # GET /service_orders
   # GET /service_orders.json
   def index
     @service_orders = ServiceOrder.all
+    @service_order = ServiceOrder.first
   end
 
   # GET /service_orders/1

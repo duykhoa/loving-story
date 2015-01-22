@@ -1,0 +1,17 @@
+h2.title.underline
+  | Moments to Remember
+.intro
+  | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+- 2.times do |i|
+  .row
+    .memory-container
+      - 3.times do |j|
+        .four.columns
+          .img-holder style = ("background: url(#{asset_url("service_orders/g#{i+1}_#{j+1}.jpg")}) center;")
+            .overlay
+              .content 
+                .name
+                  | Website Lightbox
+                .describe
+                  | by GSRthemes9
+                = link_to "view more", asset_url("service_orders/g#{i+1}_#{j+1}.jpg"), class: 'button button-primary gallery', rel: 'memory-image'
