@@ -48,6 +48,7 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
+gem "paperclip", "~> 4.2"
 
 group :development do
   gem 'better_errors'
@@ -64,13 +65,11 @@ group :development do
   gem 'rails_apps_testing'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
-  gem 'paperclip-dropbox'
 end
 
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'fakefs', :require => "fakefs/safe"
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'thin'
