@@ -1,6 +1,13 @@
 class ServiceOrdersController < ApplicationController
+<<<<<<< HEAD
   layout 'service_orders'
   before_action :set_service_order, only: [:show, :edit, :update, :destroy]
+=======
+  include ServiceOrdersControllerConcern
+
+  before_action :set_service_order, only: [:edit, :update, :destroy]
+  before_action :set_service_order_for_show_action, only: [:show]
+>>>>>>> master
 
   # GET /service_orders
   # GET /service_orders.json
@@ -72,5 +79,9 @@ class ServiceOrdersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_order_params
       params.require(:service_order).permit(:email, :his_name, :her_name, :his_story, :her_story, :status)
+    end
+
+    def set_service_order_for_show_action
+      @service_order = ServiceOrder.find service_order_id(request.subdomain)
     end
 end

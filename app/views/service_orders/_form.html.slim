@@ -1,27 +1,7 @@
-= form_for @service_order do |f|
-  - if @service_order.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@service_order.errors.count, "error")} prohibited this service_order from being saved:"
-      ul
-        - @service_order.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :his_name
-    = f.text_field :his_name
-  .field
-    = f.label :her_name
-    = f.text_field :her_name
-  .field
-    = f.label :his_story
-    = f.text_area :his_story
-  .field
-    = f.label :her_story
-    = f.text_area :her_story
-  .field
-    = f.label :status
-    = f.text_field :status
-  .actions = f.submit
+= simple_form_for @service_order do |f|
+  = f.input :his_name
+  = f.input :her_name
+  = f.input :his_story
+  = f.input :her_story
+  = f.input :our_relationship
+  = f.button :submit
