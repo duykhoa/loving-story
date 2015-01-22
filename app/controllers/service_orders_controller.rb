@@ -69,6 +69,6 @@ class ServiceOrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_order_params
-      params.require(:service_order).permit(:email, :his_name, :her_name, :his_story, :her_story, :status)
+      params.require(:service_order).permit(:email, :his_name, :her_name, :his_story, :her_story, :status, :our_relationship, :your_name, :domain, :header_image)
     end
 end
