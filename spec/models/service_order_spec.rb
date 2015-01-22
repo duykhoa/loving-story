@@ -7,7 +7,6 @@ describe ServiceOrder do
   it { should validate_presence_of(:her_story) }
   it { should validate_presence_of(:our_relationship) }
   it { should validate_presence_of(:your_name) }
-  it { should have_attached_file(:header_image) }
 
   describe "validates status inclusion" do
     let(:service_order) { build(:service_order) }
