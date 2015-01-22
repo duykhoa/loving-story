@@ -11,6 +11,7 @@ button.button-custom
   height: auto
   position: relative
   transition: all 0.2s ease
+  text-decoration: none
 
   &:after
     position: absolute
@@ -30,6 +31,14 @@ button.button-custom.primary
 
   border: 2px solid #2ea3f2 !important
   color: #2ea3f2 !important
+
+.button.button-custom
+  @extend button.button-custom
+  padding: 7px 20px
+  display: inline-block
+  border-radius: 5px
+  &:after
+    top: 5px
 
 .hidden
   display: none

@@ -1,7 +1,9 @@
 nav
-  position: static
+  position: fixed
   width: 100%
   padding: 25px 0
+  top: 0
+  z-index: 1001
 
 ul
   list-style: none
@@ -15,7 +17,30 @@ ul
 html, body, article
   height: 100%
 
+.container-fluid
+  padding: 0 !important
+  height: 100%
+
 #homes
+  #header
+    top: 0
+    .cover-image
+      background: asset_url('header.jpg')
+      height: 100%
+      position: relative
+
+      .cover-image-wrapper
+        width: 30%
+        min-width: 400px
+        position: absolute
+        text-align: center
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        .button.button-custom.share-now
+          width: 150px
+
 footer
   color: #eee
   padding: 10px 0
