@@ -19,6 +19,7 @@ class ServiceOrdersController < ApplicationController
   # GET /service_orders/new
   def new
     @service_order = ServiceOrder.new
+    render layout: "application"
   end
 
   # GET /service_orders/1/edit
