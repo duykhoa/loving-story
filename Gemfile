@@ -27,6 +27,8 @@ gem 'owlcarousel-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
 #
 gem 'devise'
+#
+gem 'high_voltage'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
