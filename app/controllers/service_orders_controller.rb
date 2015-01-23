@@ -45,15 +45,15 @@ class ServiceOrdersController < ApplicationController
   # PATCH/PUT /service_orders/1
   # PATCH/PUT /service_orders/1.json
   def update
-    #respond_to do |format|
-      #if @service_order.update(service_order_params)
-        #format.html { redirect_to @service_order, notice: 'Service order was successfully updated.' }
-        #format.json { render :show, status: :ok, location: @service_order }
-      #else
-        #format.html { render :edit }
-        #format.json { render json: @service_order.errors, status: :unprocessable_entity }
-      #end
-    #end
+    respond_to do |format|
+      if @service_order.update(service_order_params)
+        format.html { redirect_to @service_order, notice: 'Service order was successfully updated.' }
+        format.json { render :show, status: :ok, location: @service_order }
+      else
+        format.html { render :edit }
+        format.json { render json: @service_order.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # DELETE /service_orders/1
