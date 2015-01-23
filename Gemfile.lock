@@ -142,6 +142,7 @@ GEM
       haml (>= 3.0)
       nokogiri
       ruby_parser
+    high_voltage (2.2.1)
     hike (1.2.3)
     hpricot (0.8.6)
     html2haml (1.0.1)
@@ -346,6 +347,7 @@ DEPENDENCIES
   figaro (>= 1.0.0.rc1)
   font-awesome-sass (~> 4.2.0)
   haml2slim
+  high_voltage
   html2haml
   jasmine-rails
   jbuilder (~> 2.0)
