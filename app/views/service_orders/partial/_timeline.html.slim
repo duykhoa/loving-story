@@ -1,0 +1,19 @@
+h2.title.underline
+  | Our Loveline
+.intro
+  | Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
+ul.loveline
+  .vertical-line
+  - ServiceOrdersHelper.get_time_line_event.each do |e|
+    li
+      .timeline-badge
+        = icon e[0]
+      .timeline-panel
+        h5.text-pink
+          | #{e[1]}
+        .time
+          | #{e[2]}
+        .describe
+          | #{e[3]}
+        .arrow
+.seperator
