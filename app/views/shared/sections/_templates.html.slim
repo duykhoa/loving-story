@@ -1,8 +1,10 @@
 .container-fluid
+  .template-background-cover data-bottom-top = "transform: translate(0%, -100%);" data-top-bottom = "transform: translate(0%, 100%);" data-anchor-target = "#templates-gap"
+
   .row
     - 2.times do |i|
       .col-md-6.col-sm-12
-        .image-wrapper data-bottom-top = "transform: translate(0%, 100%);" data-top-bottom = "transform: translate(0%, -100%);" data-anchor-target = "#templates-gap"
+        .image-wrapper data-bottom-top = "transform: translate(0%, 40%);" data-top-bottom = "transform: translate(0%, -40%);" data-anchor-target = "#templates-gap"
           = image_tag "template1.png", data: { "bottom-top" => "opacity: -0.4", "top-bottom" => "opacity: 2.4", "anchor-target" => "#templates-gap" }
 
   .copy-wrapper data-bottom-top = "transform: translate(-50%, -150%)" data-top-bottom = "transform: translate(-50%, 50%)" data-anchor-target = "#templates-gap"
