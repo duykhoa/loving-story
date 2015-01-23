@@ -51,6 +51,7 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
+gem "paperclip", "~> 4.2"
 
 group :development do
   gem 'better_errors'
