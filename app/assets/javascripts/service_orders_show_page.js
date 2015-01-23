@@ -18,6 +18,12 @@ $(document).ready(function() {
       singleItem:true,
       autoPlay: 10000
   });
+
+  // Resize new windows for social click
+  $(".social-wrapper a").click(function(){
+    window.open(this.href, "popup", "width=800, height=500");
+    return false;
+  });
 });
 
 // Fancybox2 generate

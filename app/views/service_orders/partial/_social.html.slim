@@ -1,5 +1,15 @@
 .container
+  .share
+    h5
+      | Share this page:
+    .social-wrapper
+      .img-social
+        = link_to image_tag("service_orders/facebook-icon.png"), "https://www.facebook.com/sharer/sharer.php?u=http://mp3.zing.vn/"
+      .img-social
+        = link_to image_tag("service_orders/twitter-icon.png"), "https://twitter.com/home?status=http://mp3.zing.vn/"
+      .img-social
+        = link_to image_tag("service_orders/google-plus-icon.png"), "https://plus.google.com/share?url=http://mp3.zing.vn/"
   #fb-root
     .fb-like data-action="like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-share="true" data-show-faces="true" 
-    .fb-comments data-colorscheme="light" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" 
+    .fb-comments data-colorscheme="light" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"
 .seperator
