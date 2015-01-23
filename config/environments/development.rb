@@ -39,4 +39,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.assets.precompile += %w( admin/admin.css admin/admin.js )
+  config.assets.precompile += %w( service_orders_show_page.css )
+
+  config.assets.precompile += %w( service_orders_show_page.js )
 end

@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
   factory :service_order do
     email Faker::Internet.email
@@ -8,5 +10,6 @@ FactoryGirl.define do
     our_relationship Faker::Lorem.paragraph
     your_name Faker::Name.name
     status ServiceOrder.statuses.fetch(:pending)
+    header_image Faker::Avatar.image
   end
 end

@@ -1,5 +1,75 @@
-h1 New service_order
+section#header
+  header
+    .container
+      .row
+        .twelve.columns
+          h1 Filling the form below
 
-== render 'form'
+#skrollr-body
+  section#process(data-0 = "position:static" data-200 = "position:fixed;top:0")
+    .container
+      .row
+        .progress-bar
+          #percentage(data-value = 0)
 
-= link_to 'Back', service_orders_path
+      .row.step-wrapper
+        - (1..3).each do |i|
+          .four.columns.wrapper
+            .step= i
+  = simple_form_for @service_order do |f|
+    section.form-content#form-step-1(data-0 = "top: 225px" data-225 = "position: fixed; top:0%" data-70p= "top: 0%" data-100p = "top:-100%")
+      .container
+        .row
+          .eight.columns
+            h1 Your information
+            h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+
+          .four.columns
+            .form-wrapper
+              = render 'service_orders/form/step_1', f: f
+            .form-action
+              = button_tag "Next", class: 'button-custom'
+
+    section.form-content#form-step-2(data-0 = "top: 100%" data-100p = "top: 100%" data-105p = "top: 0%" data-170p = "top: 0%" data-200p = 'top: -100%')
+      .container
+        .row
+          .three.columns
+            .aside#info-navigation
+              ul.info-list
+                - %w(name story our_relationship timeline photo).each do |info|
+                  li
+                    = link_to info.humanize, "##{info}"
+
+          .nine.columns
+            .content-wrapper#name
+              .row= render 'service_orders/form/step_2_name', f: f
+
+            .content-wrapper#story
+              .row= render 'service_orders/form/step_2_story', f: f
+
+            .content-wrapper#relationship
+              .row= render 'service_orders/form/step_2_relationship', f: f
+
+            .content-wrapper#photo
+              .row= render 'service_orders/form/step_2_photo', f: f
+
+            .content-wrapper
+              .row
+                .four.offset-by-one.columns
+                  = button_tag "Previous", class: 'button-custom primary button-previous'
+                .four.offset-by-one.columns
+                  = button_tag "Next", class: 'button-custom primary button-next'
+    section#form-step-3.form-content(data-0 = "top: 100%" data-200p = "top: 100%" data-205p = "top: 0%")
+      .container
+        .row
+          .eight.columns
+            h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+
+          .four.columns
+            .domain-wrapper
+              = render 'service_orders/form/step_3', f: f
+            .row
+              .six.columns
+                = button_tag "Previous", class: 'button-custom primary button-previous-step-3'
+              .six.columns
+                = button_tag "Launch", class: 'button-custom primary button-launch'
