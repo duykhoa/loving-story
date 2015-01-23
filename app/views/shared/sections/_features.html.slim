@@ -1,10 +1,11 @@
 .container
-  .row
-    - 4.times do |i|
-      .col-md-3.col-sm-2.col-xs-12
-        .title
-          h5
-            = icon 'home'
-            = "Feature #{i+1}"
-        .content
-          | Using Divi’s side navigation bar, your users can easily click through your long format, single page websites.
+  .feature-wrapper
+    .row
+      - 4.times do |i|
+        .col-md-3.col-sm-2.col-xs-12
+          .title
+            h3
+              = icon 'home'
+              = "Feature #{i+1}"
+          .content
+            | Using Divi’s side navigation bar, your users can easily click through your long format, single page websites.

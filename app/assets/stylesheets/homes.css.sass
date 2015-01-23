@@ -15,7 +15,7 @@ ul
     margin: 0
     padding: 0 10px
 
-html, body, article
+html, body, article, #skrollr-body
   height: 100%
 
 .container-fluid
@@ -23,10 +23,43 @@ html, body, article
   height: 100%
 
 #homes
+  .button.button-custom.share-now
+    width: 170px
+
+  #templates
+    color: white
+    padding: 15px 0
+    background: asset_url('feather.jpg')
+    background-size: cover
+
+    h2
+      padding: 0
+      margin-bottom: 20px
+      font-weight: 300
+
+    .container-fluid
+      position: relative
+
+    .copy-wrapper
+      position: absolute
+      width: 50%
+      min-width: 300px
+      top: 50%
+      left: 50%
+      z-index: 4
+      text-align: center
+
+    .image-wrapper
+      width: 85%
+      margin: 0 auto
+
+      img
+        width: 100%
+
   #header
-    top: 0
-    .cover-image
+    .container-fluid
       background: asset_url('header.jpg')
+      background-size: cover
       height: 100%
       position: relative
 
@@ -39,9 +72,6 @@ html, body, article
         left: 50%
         transform: translate(-50%, -50%)
 
-        .button.button-custom.share-now
-          width: 170px
-
         h1
           font-size: 40px
           color: #EEE
@@ -51,20 +81,47 @@ html, body, article
           font-weight: 900
           color: $red
 
+  #features
+    .feature-wrapper
+      padding: 20px 0
+
 footer
-  color: #eee
-  padding: 10px 0
-  background: #222
+  background: #353535
+  color: white
 
-  h5
-    font-size: 15px
-    margin: 0
+  .container-fluid
+    height: 100%
+    padding-top: 40px
+    position: relative
 
-  ul
-    text-align: right
+  .social-connection
+    padding: 30px 0
+    font: 30px
 
-i
-  padding-right: 10px
+    .fa-stack
+      font-size: 2em
 
+    .fa-stack-2x.fb
+      color: #3B5998
+    .fa-stack-2x.tw
+      color: #5EA9DD
+    .fa-stack-2x.gp
+      color: #DF4B38
+
+    .fa-stack-1x
+      color: white
+
+  .copy-right
+    position: absolute
+    width: 100%
+    height: 50px
+    text-align: center
+    bottom: 0
+    color: white
+    background: #111
+
+    h5
+      line-height: 50px
+      margin: 0
 a
   text-decoration: none

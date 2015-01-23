@@ -1,10 +1,22 @@
-.container
+.container-fluid
   .row
-    .four.columns
-      h5 Copyright by TenLuaWeb
+    .col-md-12.text-center
+      h2 Follow Us
+      h5 Follow us and get the lastest news in
+  .row.social-connection
+    .col-md-2.col-md-offset-3.text-center
+      span.fa-stack.fa-lg
+        = icon 'circle fa-stack-2x fb'
+        = icon 'facebook fa-stack-1x'
+    .col-md-2.text-center
+      span.fa-stack.fa-lg
+        = icon 'circle fa-stack-2x tw'
+        = icon 'twitter fa-stack-1x'
+    .col-md-2.text-center
+      span.fa-stack.fa-lg
+        = icon 'circle fa-stack-2x gp'
+        = icon 'google-plus fa-stack-1x'
 
-    .three.columns.u-pull-right
-      ul
-        - %w(facebook twitter).each do |social_chanel|
-          li= icon social_chanel
+  .copy-right
+    h5 Copyright by TenLuaWeb
 

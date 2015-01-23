@@ -1,10 +1,10 @@
-.container
-  .row
-    h3 Template Select
+.container-fluid
   .row
     - 2.times do |i|
-      .one-half.column
-        .image-wrapper
-          = link_to "#" do
-            = image_tag "product1.png"
+      .col-md-6.col-sm-12
+        .image-wrapper data-bottom-top = "transform: translate(0%, 100%);" data-top-bottom = "transform: translate(0%, -100%);" data-anchor-target = "#templates-gap"
+          = image_tag "template1.png", data: { "bottom-top" => "opacity: -0.4", "top-bottom" => "opacity: 2.4", "anchor-target" => "#templates-gap" }
 
+  .copy-wrapper data-bottom-top = "transform: translate(-50%, -150%)" data-top-bottom = "transform: translate(-50%, 50%)" data-anchor-target = "#templates-gap"
+    h2 Most popular templates
+    = link_to "Pick one now", "#", class: "button button-custom share-now"

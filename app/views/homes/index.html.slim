@@ -1,15 +1,16 @@
-.content-wrapper-100p
-
-section#header.content-wrapper-100p.fixed data-0p = "top: 0%" data-100p = "top: -100%"
+section#header.content-wrapper-100p.fixed data-bottom-top = "transform: translate(0%, 100%)" data-top-bottom = "transform: translate(0, -100%)" data-anchor-target = "#header-gap"
   = render 'shared/sections/header'
 
-section#features.content-wrapper-50p
-  = render 'shared/sections/features'
-
-.content-wrapper-100p
-
-section#templates.content-wrapper-100p.fixed
+section#templates.content-wrapper-100p.fixed data-bottom-top = "transform: translate(0%, 100%)" data-top-bottom = "transform: translate(0, -100%)" data-anchor-target = "#templates-gap"
   = render 'shared/sections/templates'
 
-/section#commitments
-  /= render 'shared/sections/commitments'
+#skrollr-body
+  .content-wrapper-100p#header-gap
+
+  section#features.content-wrapper-50p
+    = render 'shared/sections/features'
+
+  .content-wrapper-100p#templates-gap
+
+  footer.content-wrapper-50p
+    = render 'shared/footer'

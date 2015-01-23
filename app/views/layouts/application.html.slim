@@ -4,16 +4,11 @@ html
   head
     title LoveStory
     = stylesheet_link_tag    'application', media: 'all'
-    link(href = "//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet")
-
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  body#skrollr-body
+  body
     nav data-0p = "background: rgba(255, 255, 255, 0)" data-30p= "background: rgba(255, 255, 255, 1)"
       = render 'shared/nav'
 
     article(id= controller_name)
       = yield
-
-      footer
-        = render 'shared/footer'
