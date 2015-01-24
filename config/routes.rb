@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :admin_users
   get 'homes/index'
 
-  resources :service_orders
+  resources :service_orders, only: [:new, :create, :show]
 
   match '/' => 'service_orders#show', :constraints => { :subdomain => /.+.4ever/ }, via: [:get]
   root to: 'homes#index'
