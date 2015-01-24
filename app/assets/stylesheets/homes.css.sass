@@ -1,5 +1,10 @@
 nav
-  padding: 25px 0
+  position: fixed
+  width: 100%
+  padding: 15px 0
+  top: 0
+  z-index: 1001
+  color: white
 
 ul
   list-style: none
@@ -10,57 +15,117 @@ ul
     margin: 0
     padding: 0 10px
 
+html, body, article, #skrollr-body
+  height: 100%
+
+.container-fluid
+  padding: 0 !important
+  height: 100%
+
 #homes
-  header
-    background-image: asset-url('header_image.jpg')
-    height: 800px
-    width: 100%
-    background-size: cover
+  .button.button-custom.share-now
+    width: 170px
 
-  section#features
-    .container
-      padding: 25px 0
+  #templates
+    color: white
+    padding: 15px 0
 
-  section#templates
-    background-image: asset-url('templates_background.jpg')
-    background-size: cover
+    h2
+      padding: 0
+      margin-bottom: 20px
+      font-weight: 300
 
-    @extend section#features
+    .template-background-cover
+      background: asset_url('feather.jpg')
+      background-size: cover
+      width: 100%
+      height: 100%
 
-    h3
-      text-align: center
-      color: white
+      position: absolute
+      top: 0
 
-    .column:nth-child(even)
-      .image-wrapper
-        float: right
-
-  section#commitments
-    background-image: asset-url('commitment_background.jpg')
-    background-size: cover
-    height: 300px
-
-    h3
-      text-align: center
-      color: white
+    .copy-wrapper
+      position: absolute
+      width: 50%
+      min-width: 300px
       top: 50%
+      left: 50%
+      z-index: 4
+      text-align: center
 
-    @extend section#features
+    .image-wrapper
+      width: 85%
+      margin: 0 auto
+
+      img
+        width: 100%
+
+  #header
+    .container-fluid
+      background: asset_url('header.jpg')
+      background-size: cover
+      height: 100%
+      position: relative
+
+      .cover-image-wrapper
+        width: 50%
+        min-width: 400px
+        position: absolute
+        text-align: center
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        h1
+          font-size: 40px
+          color: #EEE
+          font-weight: 300
+
+        h1.red
+          font-weight: 900
+          color: $red
+
+  #features
+    .feature-wrapper
+      padding: 20px 0
 
 footer
-  color: #eee
-  padding: 10px 0
-  background: #222
+  background: #353535
+  color: white
 
-  h5
-    font-size: 15px
-    margin: 0
+  .container-fluid
+    height: 100%
+    padding-top: 40px
+    position: relative
 
-  ul
-    text-align: right
+  .social-connection
+    padding: 30px 0
+    font: 30px
 
-i
-  padding-right: 10px
+    .fa-stack
+      font-size: 2em
 
+    .fa-stack-2x.fb
+      color: #3B5998
+    .fa-stack-2x.tw
+      color: #5EA9DD
+    .fa-stack-2x.gp
+      color: #DF4B38
+
+    .fa-stack-1x
+      color: white
+
+  .copy-right
+    position: absolute
+    width: 100%
+    height: 50px
+    text-align: center
+    bottom: 0
+    color: white
+    background: #111
+
+    h5
+      line-height: 50px
+      margin: 0
 a
   text-decoration: none

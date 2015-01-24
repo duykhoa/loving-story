@@ -1,11 +1,19 @@
-section#header
+section#header.content-wrapper-100p.fixed data-bottom-top = "transform: translate(0%, 100%)" data-top-bottom = "transform: translate(0, -100%)" data-anchor-target = "#header-gap"
   = render 'shared/sections/header'
 
-section#features
-  = render 'shared/sections/features'
-
-section#templates
+section#templates.content-wrapper-100p.fixed data-bottom-top = "transform: translate(0%, 100%)" data-top-bottom = "transform: translate(0, -100%)" data-anchor-target = "#templates-gap"
   = render 'shared/sections/templates'
 
-section#commitments
-  = render 'shared/sections/commitments'
+#skrollr-body
+  .content-wrapper-100p#header-gap
+
+  section#features.content-wrapper-50p
+    = render 'shared/sections/features'
+
+  .content-wrapper-100p#templates-gap
+
+  section#features.content-wrapper-100p
+    = render 'shared/sections/commitments'
+
+  footer.content-wrapper-50p
+    = render 'shared/footer'
