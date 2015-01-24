@@ -1,0 +1,44 @@
+h2.title.underline
+  | Our Favourites
+.intro
+  | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+.container
+  .img-couple
+    = image_tag("service_orders/couple.jpg")
+  .row.favorite-name
+    .six.columns
+      .name.u-pull-right
+        | Adam
+    .six.columns
+      .name.u-pull-left
+        | Eve
+  .favorite-list
+    .vertical-line
+    - 4.times do |i|
+      .row
+        .five.columns.text-right
+          h5.text-pink
+            | #{ServiceOrdersHelper.get_favorite[:male_favorite][i]}
+          span
+            | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
+        .two.columns
+          .icon-container
+            = icon ServiceOrdersHelper.get_favorite[:icon][i]
+        .five.columns.text-left
+          h5.text-pink
+            | #{ServiceOrdersHelper.get_favorite[:female_favorite][i]}
+          span
+            | Sed ut perspiciatis unde omn iste natus error sit voluptatem accusantium
+.common
+  h2.title
+    | Common Favorites
+  .container
+    - 2.times do |i|
+      .row
+        - 3.times do |j|
+          .four.columns
+            .item
+              .icon-wrapper
+                = icon ServiceOrdersHelper.get_favorite[:common_favorite][i][j][1]
+              h5
+                | #{ServiceOrdersHelper.get_favorite[:common_favorite][i][j][0]}
