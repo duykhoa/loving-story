@@ -138,6 +138,8 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     haml (4.0.6)
@@ -146,7 +148,6 @@ GEM
       haml (>= 3.0)
       nokogiri
       ruby_parser
-    high_voltage (2.2.1)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -352,8 +353,8 @@ DEPENDENCIES
   fancybox2-rails (~> 0.2.8)
   figaro (>= 1.0.0.rc1)
   font-awesome-sass (~> 4.2.0)
+  friendly_id
   haml2slim
-  high_voltage
   html2haml
   jasmine-rails
   jbuilder (~> 2.0)
