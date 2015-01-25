@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :page do
-    name "MyString"
-content "MyText"
-slug "MyString"
+    name Faker::Name.name
+    content Faker::Lorem.paragraph
+    slug Faker::Name.name
   end
 
 end

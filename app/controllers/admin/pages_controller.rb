@@ -1,4 +1,5 @@
 class Admin::PagesController < ApplicationController
+  #before_action :authenticate_admin_user!
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def index
