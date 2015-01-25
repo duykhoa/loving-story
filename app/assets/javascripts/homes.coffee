@@ -4,5 +4,5 @@
 
 $(document).ready ->
   s = skrollr.init(
-    forceHeight: true
+    smoothScrolling: true
   )

@@ -11,6 +11,7 @@ button.button-custom
   height: auto
   position: relative
   transition: all 0.2s ease
+  text-decoration: none
 
   &:after
     position: absolute
@@ -31,5 +32,32 @@ button.button-custom.primary
   border: 2px solid #2ea3f2 !important
   color: #2ea3f2 !important
 
+.button.button-custom
+  @extend button.button-custom
+  padding: 7px 25px
+  display: inline-block
+  border-radius: 5px
+  &:after
+    top: 5px
+
 .hidden
   display: none
+
+.content-wrapper-100p
+  height: 100%
+  width: 100%
+  overflow: hidden
+
+.content-wrapper-50p
+  @extend .content-wrapper-100p
+  height: 50%
+
+.fixed
+  position: fixed
+
+.skrollr-desktop body
+  height: 100% !important
+
+header
+  .container
+    background: asset_url("header.jpg")
