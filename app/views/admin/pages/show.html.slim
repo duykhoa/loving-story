@@ -1,2 +1,10 @@
-h1 Admin::Pages#show
-p Find me in app/views/admin/pages/show.html.slim
+p
+  strong Name:
+  = @dynamic.name
+p
+  strong Content:
+  = @dynamic.content
+
+= link_to 'Edit', edit_admin_page_path(@dyanmic)
+'|
+= link_to 'Back', admin_pages_path

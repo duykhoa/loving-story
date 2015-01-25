@@ -1,2 +1,8 @@
-h1 Admin::Pages#edit
-p Find me in app/views/admin/pages/edit.html.slim
+h1 Editing page
+
+== render 'form'
+
+= link_to 'Show', admin_page_path(@dynamic)
+'|
+= link_to 'Back', admin_pages_path
+
