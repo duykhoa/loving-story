@@ -18,12 +18,12 @@ class Admin::PagesController < ApplicationController
   def create
     @dynamic = Page.new(page_params)
     @dynamic.save
-    redirect_to admin_pages_path
+    redirect_to admin_page_path(@dynamic)
   end
 
   def update
     @dynamic.update(page_params)
-    redirect_to admin_pages_path
+    redirect_to admin_page_path
   end
 
   def destroy
@@ -37,6 +37,6 @@ class Admin::PagesController < ApplicationController
     end
 
     def page_params
-      params.require(:page).permit(:name, :content)
+      params.require(:page).permit(:name, :content, :slug)
     end
 end
