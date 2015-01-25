@@ -3,3 +3,5 @@ ul.nav.navbar-nav.pull-right
     = link_to "#", class: "dropdown-toggle" do
       = icon 'bell-o'
       span.badge.badge-default 7
+  li.dropdown.dropdown-extended.sign-out
+    = link_to "Sign Out", destroy_admin_user_session_path, :method => :delete

@@ -8,11 +8,8 @@ html
     = csrf_meta_tags
     = render 'shared/meta_tag'
   body
-    nav
+    nav data-0p = "background: rgba(255, 255, 255, 0)" data-30p= "background: rgba(255, 255, 255, 1)"
       = render 'shared/nav'
 
     article(id= controller_name)
       = yield
-
-    footer
-      = render 'shared/footer'
