@@ -7,6 +7,22 @@
           .title
             h3
               = icon 'home'
-              = "Feature #{i+1}"
+              - case i
+              - when 0
+                = @first_feature_title
+              - when 1
+                = @second_feature_title
+              - when 2
+                = @third_feature_title
+              -when 3
+                = @fourth_feature_title
           .content
-            | Using Divi’s side navigation bar, your users can easily click through your long format, single page websites.
+              - case i
+              - when 0
+                = @first_feature_content
+              - when 1
+                = @second_feature_content
+              - when 2
+                = @third_feature_content
+              - when 3
+                = @fourth_feature_content
