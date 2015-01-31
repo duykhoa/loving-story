@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :setting do
-    key "MyString"
-value "MyText"
+    key Faker::Name.name
+	value Faker::Lorem.paragraph
   end
-
 end
