@@ -1,5 +1,11 @@
 class Setting < ActiveRecord::Base
-  def self.get_value_by_key(input_key)
-    Setting.find_by_key(input_key).value
+  after_commit :flush_cache
+
+  def self.cached_settings
+    Rails.cache.fetch("all_text_settings") { all.to_a }
+  end
+
+  def flush_cache
+    Rails.cache.delete("all_text_settings")
   end
 end
