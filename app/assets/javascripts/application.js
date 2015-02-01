@@ -16,3 +16,4 @@
 //= require StepProgressBar
 //= require skrollr
 //= require homes
+//= require service_orders_new_page
