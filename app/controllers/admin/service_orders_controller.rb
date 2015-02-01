@@ -1,5 +1,4 @@
-class Admin::ServiceOrdersController < ApplicationController
-  before_action :authenticate_admin_user!
+class Admin::ServiceOrdersController < Admin::AdminController
   before_action :set_service_order, only: [:edit, :update, :destroy]
   layout 'admin'
 
