@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :service_orders, only: [:new, :create, :show]
 
   match '/' => 'service_orders#show', :constraints => { :subdomain => /.+.4ever/ }, via: [:get]
-  root to: 'homes#index'
+
+  root to: 'homes#index', subdomain: false
 end
