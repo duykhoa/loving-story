@@ -34,24 +34,37 @@ describe ServiceOrder do
     end
   end
 
-  it "should return a short_his_name" do
-    short_name = ServiceOrder.new(his_name: "John Smith")
-    expect(short_name.his_name) == "John"
+  describe ".short_his_name" do
+    let(:service_order) { build(:service_order) }
+    let(:his_name) { FactoryGirl.create(:his_name) }
+
+    context "valid short_his_name" do
+      it "return short_his_name" do
+        expect(service_order.short_his_name)
+      end
+    end
+
+    context "invalid short_his_name" do
+      it "not return short_his_name" do
+        expect(service_order.his_name)
+      end
+    end
   end
 
-  it "should not return a short_his_name" do
-    short_name = ServiceOrder.new(his_name: "John Smith")
-    expect(short_name.his_name) == (["John Smith", "Smith"])
-  end
+  describe ".short_her_name" do
+    let(:service_order) { build(:service_order) }
+    let(:her_name) { FactoryGirl.create(:her_name) }
 
-  it "should return a short_her_name" do
-    short_name = ServiceOrder.new(her_name: "Joe Tester")
-    expect(short_name.her_name) == "Joe"
-  end
+    context "valid short_her_name" do
+      it "return short_her_name" do
+        expect(service_order.short_her_name)
+      end
+    end
 
-  it "should not return a short_her_name" do
-    short_name = ServiceOrder.new(her_name: "Joe Tester")
-    expect(short_name.her_name) == (["Joe Tester", "Tester"])
+    context "invalid short_her_name" do
+      it "not return short_her_name" do
+        expect(service_order.her_name)
+      end
+    end
   end
-
 end
