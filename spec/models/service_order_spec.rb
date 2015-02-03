@@ -33,4 +33,25 @@ describe ServiceOrder do
       end
     end
   end
+
+  it "should return a short_his_name" do
+    short_name = ServiceOrder.new(his_name: "John Smith")
+    expect(short_name.his_name) == "John"
+  end
+
+  it "should not return a short_his_name" do
+    short_name = ServiceOrder.new(his_name: "John Smith")
+    expect(short_name.his_name) == (["John Smith", "Smith"])
+  end
+
+  it "should return a short_her_name" do
+    short_name = ServiceOrder.new(her_name: "Joe Tester")
+    expect(short_name.her_name) == "Joe"
+  end
+
+  it "should not return a short_her_name" do
+    short_name = ServiceOrder.new(her_name: "Joe Tester")
+    expect(short_name.her_name) == (["Joe Tester", "Tester"])
+  end
+
 end
