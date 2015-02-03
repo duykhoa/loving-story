@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'errors/show'
+
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   namespace :admin do
     resources :service_orders, only: [:index, :edit, :update, :destroy]
