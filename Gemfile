@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby '2.1.1'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
@@ -52,6 +51,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 gem "paperclip", "~> 4.2"
+gem 'email_validator'
 
 group :development do
   gem 'better_errors'
@@ -77,7 +77,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'thin'
   gem 'shoulda-matchers', require: false
-  gem 'email_validator'
 end
 
 group :test do
