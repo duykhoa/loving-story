@@ -24,6 +24,9 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem 'devise'
 #Create Semi Static Pages
 gem 'friendly_id'
+#Adding Simple WYSIWYG Editor for create Pages Content
+gem 'summernote-rails'
+gem 'codemirror-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -81,6 +81,8 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.5)
       climate_control (>= 0.0.3, < 1.0)
+    codemirror-rails (4.8)
+      railties (>= 3.0, < 5)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -306,6 +308,8 @@ GEM
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    summernote-rails (0.5.10.2)
+      railties (>= 3.1)
     temple (0.7.5)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -343,6 +347,7 @@ DEPENDENCIES
   capistrano-rails-console
   capistrano-rvm (~> 0.1.1)
   capybara
+  codemirror-rails
   coffee-rails (~> 4.1.0)
   compass-rails
   database_cleaner
@@ -377,6 +382,7 @@ DEPENDENCIES
   slim-rails
   spring
   spring-commands-rspec
+  summernote-rails
   thin
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
