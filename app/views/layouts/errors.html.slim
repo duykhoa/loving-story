@@ -1,0 +1,16 @@
+doctype html
+
+html
+  head
+    title LoveStory
+    = stylesheet_link_tag 'errors'
+    = csrf_meta_tags
+    = render 'shared/favicon'
+    = render 'shared/meta_tag'
+  body
+    section#top
+      header OOPS!
+      h2#subtitle
+        span Look like this page is no longer exist! Come back to 
+        span= link_to "home page", root_url
+    = yield
