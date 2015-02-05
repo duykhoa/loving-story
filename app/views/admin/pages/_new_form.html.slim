@@ -1,15 +1,7 @@
-= form_for @dynamic, url: :admin_pages do |f|
-  - if @dynamic.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@dynamic.errors.count, "error")} prohibited this page from being saved:"
-      ul
-        - @dynamic.errors.full_messages.each do |message|
-          li = message
-
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :content
-    = f.text_area :content
-  .actions = f.submit
+= simple_form_for @dynamic, url: :admin_pages do |f|
+  .form-group
+    = f.input :name
+  .form-group
+    = f.input :content, class: "summernote"
+  .form-group
+    = f.button :submit, class: "btn-primary"
