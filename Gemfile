@@ -39,6 +39,7 @@ gem 'slim-rails'
 
 gem "paperclip", "~> 4.2"
 gem 'email_validator'
+gem 'paperclip-dropbox'
 
 # custom error page
 gem 'gaffe'
