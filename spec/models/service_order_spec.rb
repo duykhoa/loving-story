@@ -34,36 +34,22 @@ describe ServiceOrder do
     end
   end
 
-  describe ".short_his_name" do
-    let(:service_order) { build(:service_order) }
-    let(:his_name) { FactoryGirl.create(:his_name) }
+  describe "#short_his_name" do
+    let(:service_order) { build(:service_order, his_name: "Vu Tran") }
 
     context "valid short_his_name" do
-      it "return short_his_name" do
-        expect(service_order.short_his_name)
-      end
-    end
-
-    context "invalid short_his_name" do
-      it "not return short_his_name" do
-        expect(service_order.his_name)
+      it "returns short_his_name" do
+        expect(service_order.short_his_name).to eq("Vu")
       end
     end
   end
 
-  describe ".short_her_name" do
-    let(:service_order) { build(:service_order) }
-    let(:her_name) { FactoryGirl.create(:her_name) }
+  describe "#short_her_name" do
+    let(:service_order) { build(:service_order, her_name: "Vu Tran") }
 
     context "valid short_her_name" do
-      it "return short_her_name" do
-        expect(service_order.short_her_name)
-      end
-    end
-
-    context "invalid short_her_name" do
-      it "not return short_her_name" do
-        expect(service_order.her_name)
+      it "returns short_her_name" do
+        expect(service_order.short_her_name).to eq("Vu")
       end
     end
   end
