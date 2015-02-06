@@ -8,4 +8,12 @@ class ServiceOrder < ActiveRecord::Base
   has_attached_file :header_image, :styles => { :medium => "1200x800>" }
   validates_attachment_content_type :header_image, :content_type => /\Aimage\/.*\Z/
 
+  def short_his_name
+    his_name.split(" ").first
+  end
+
+  def short_her_name
+    her_name.split(" ").first
+  end
+
 end

@@ -127,6 +127,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
@@ -293,6 +294,11 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slim (3.0.1)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -373,7 +379,7 @@ DEPENDENCIES
   figaro (>= 1.0.0.rc1)
   font-awesome-rails
   font-awesome-sass (~> 4.2.0)
-  friendly_id
+  gaffe
   haml2slim
   html2haml
   jasmine-rails
@@ -395,6 +401,7 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   simple_form
+  simplecov
   slim-rails
   spring
   spring-commands-rspec

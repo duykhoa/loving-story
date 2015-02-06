@@ -8,10 +8,10 @@ h2.title.underline
   .row.favorite-name
     .six.columns
       .name.u-pull-right
-        | Adam
+        = @service_order.short_his_name
     .six.columns
       .name.u-pull-left
-        | Eve
+        = @service_order.short_her_name
   .favorite-list
     .vertical-line
     - 4.times do |i|
