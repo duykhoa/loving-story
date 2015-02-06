@@ -1,13 +1,12 @@
 ready = ->
   # to set summernote object
-  # You should change '#page_content' to your textarea input id
+  # You should change '#post_content' to your textarea input id
   summer_note = $('#page_content')
 
   # to call summernote editor
   summer_note.summernote
     # to set options
-    height:500
-    lang: 'ko-KR'
+    height: 80
     codemirror:
       lineNumbers: true
       tabSize: 2
@@ -17,8 +16,8 @@ ready = ->
   summer_note.code summer_note.val()
 
   # to get code for summernote
-  summer_note.closest('form').submit ->
-    # alert $('#page_content').code()
+  summer_note.closest('new_form').submit ->
+    # alert $('#post_content').code()
     summer_note.val summer_note.code()
     true
 

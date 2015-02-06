@@ -1,7 +1,7 @@
 = simple_form_for @dynamic, url: :admin_pages do |f|
   .form-group
-    = f.input :name
+    = f.input :name, input_html:{class:'form-control'}
   .form-group
-    = f.input :content, class: "summernote"
+    = f.input :content, class:'summernote'
   .form-group
     = f.button :submit, class: "btn-primary"
