@@ -14,31 +14,31 @@ AdminUser.create(
 # dynamic text in home page
 settings = 
   [ 
-    { key: 'Header_intro',
+    { key: 'header_intro',
       value: 'Keep your love story 4ever on'
     },
-    { key: 'Header_title',
+    { key: 'header_title',
       value: 'TenLuaWeb'
     },
-    { key: 'First_feature_title',
+    { key: 'first_feature_title',
       value: 'Feature 1'
     },
-    { key: 'Second_feature_title',
+    { key: 'second_feature_title',
       value: 'Feature 2'
     },
-    { key: 'Third_feature_title',
+    { key: 'third_feature_title',
       value: 'Feature 3'
     },
-    { key: 'Fourth_feature_title',
+    { key: 'fourth_feature_title',
       value: 'Feature 4'
     },
-    { key: 'Templates_choosing_title',
+    { key: 'templates_choosing_title',
       value: 'Most popular templates'
     },
-    { key: 'Commitment_title',
+    { key: 'commitment_title',
       value: 'Commitment'
     },
-    { key: 'Follow_title',
+    { key: 'follow_title',
       value: 'Follow Us'
     }
   ]
