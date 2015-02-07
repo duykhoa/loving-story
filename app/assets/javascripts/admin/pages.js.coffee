@@ -17,7 +17,6 @@ ready = ->
 
   # to get code for summernote
   summer_note.closest('new_form').submit ->
-    # alert $('#post_content').code()
     summer_note.val summer_note.code()
     true
 
