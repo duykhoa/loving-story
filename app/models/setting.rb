@@ -8,6 +8,10 @@ class Setting < ActiveRecord::Base
       fetch_cached
     end
 
+    def value_of(key_name: :header_info)
+      fetch_cached[key_name]
+    end
+
     def map_data
       all.
       inject({}) { |result, setting| result.merge(setting.key.to_sym => setting.value) }
