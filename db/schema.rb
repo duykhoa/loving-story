@@ -52,10 +52,6 @@ ActiveRecord::Schema.define(version: 20150130154601) do
     t.datetime "header_image_updated_at"
   end
 
-  create_table "settings", force: :cascade do |t|
-    t.string   "key"
-    t.text     "value"
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 

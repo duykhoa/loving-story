@@ -1,16 +1,16 @@
 h2.title.underline
   | Welcome Everyone
 .intro
-  | Welcome to adams' & Eves' website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events.
+  | Welcome to #{@service_order.short_his_name} & #{@service_order.short_her_name} website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events.
 .row
   .five.columns
     .image.male.u-pull-right
       .cover
         .info
           h3
-            | I'm Adam
+            | I'm #{@service_order.short_his_name}
           p
-            | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            = @service_order.his_story
   .two.columns
     .and.text-pink &
   .five.columns
@@ -18,6 +18,6 @@ h2.title.underline
       .cover
         .info
           h3
-            | I'm Eve
+            | I'm #{@service_order.short_her_name}
           p
-            | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            = @service_order.her_story
