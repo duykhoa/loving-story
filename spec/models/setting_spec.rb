@@ -1,17 +1,6 @@
 require 'rails_helper'
 
 describe Setting, :type => :model do
-  describe ".cached_settings" do
-    before do
-      allow(Rails).to receive_message_chain(:cache, :fetch).and_return([])
-      Setting.cached_settings
-    end
-
-    it "calls Rails.cache" do
-      expect(Rails).to have_received(:cache).once
-    end
-  end
-
   describe ".map_data" do
     let!(:settings) { create_list(:setting, 10) }
     let(:data) { Setting.map_data }
@@ -30,8 +19,8 @@ describe Setting, :type => :model do
       let!(:custom_setting) { create(:setting, key: "custom_key", value: "CUSTOM VALUE") }
 
       it "returns value of custom_setting" do
-	value = data[:custom_key]
-	expect(value).to eq("CUSTOM VALUE")
+        value = data[:custom_key]
+        expect(value).to eq("CUSTOM VALUE")
       end
     end
   end

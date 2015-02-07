@@ -2,4 +2,4 @@
   .row
     .six.columns.offset-by-three
       h3
-        = @settings.commit_title
+        = Setting.value_of(key_name: :commit_title)

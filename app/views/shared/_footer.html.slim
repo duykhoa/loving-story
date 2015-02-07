@@ -2,9 +2,9 @@
   .row
     .col-md-12.text-center
       h2
-        = @settings.follow_title
+        = Setting.value_of(key_name: :follow_title)
       h5
-        = @settings.follow_intro
+        = Setting.value_of(key_name: :follow_intro)
   .row.social-connection
     .col-md-2.col-md-offset-3.text-center
       span.fa-stack.fa-lg
