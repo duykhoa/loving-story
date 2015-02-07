@@ -9,20 +9,20 @@
               = icon 'home'
               - case i
               - when 0
-                = @first_feature_title
+                = @settings.first_feature_title
               - when 1
-                = @second_feature_title
+                = @settings.second_feature_title
               - when 2
-                = @third_feature_title
+                = @settings.third_feature_title
               -when 3
-                = @fourth_feature_title
+                = @settings.fourth_feature_title
           .content
               - case i
               - when 0
-                = @first_feature_content
+                = @settings.first_feature_content
               - when 1
-                = @second_feature_content
+                = @settings.second_feature_content
               - when 2
-                = @third_feature_content
+                = @settings.third_feature_content
               - when 3
-                = @fourth_feature_content
+                = @settings.fourth_feature_content
