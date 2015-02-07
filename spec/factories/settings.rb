@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :setting do
-    key Faker::Name.name
+    sequence(:key) { |i| "Key#{i}" }
     value Faker::Lorem.paragraph
   end
 end

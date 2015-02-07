@@ -10,7 +10,7 @@ class Setting < ActiveRecord::Base
 
     def map_data
       all.
-      map { |setting| { setting.key => setting.value } }
+      inject({}) { |result, setting| result.merge(setting.key.to_sym => setting.value) }
     end
 
     def fetch_cached
