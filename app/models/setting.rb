@@ -1,5 +1,5 @@
 class Setting < ActiveRecord::Base
-  SETTING_KEY = "all_text_settings"
+  SETTING_KEY = "key_settings"
 
   after_commit :flush_cache
 
@@ -19,6 +19,12 @@ class Setting < ActiveRecord::Base
 
     def fetch_cached
       Rails.cache.fetch(SETTING_KEY) { map_data }
+    end
+
+    Setting.fetch_cached.keys.each do |key|
+      define_method "value_of_#{key}" do
+        value_of(key_name: key)
+      end
     end
   end
 
