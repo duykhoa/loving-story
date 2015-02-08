@@ -8,5 +8,6 @@
           = image_tag "template1.png", data: { "bottom-top" => "opacity: -0.4", "top-bottom" => "opacity: 2.4", "anchor-target" => "#templates-gap" }
 
   .copy-wrapper data-bottom-top = "transform: translate(-50%, -150%)" data-top-bottom = "transform: translate(-50%, 50%)" data-anchor-target = "#templates-gap"
-    h2 Most popular templates
+    h2
+      = Setting.value_of(key_name: :template_title)
     = link_to "Pick one now", "#", class: "button button-custom share-now"
