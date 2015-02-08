@@ -18,11 +18,13 @@ class Admin::PagesController < Admin::AdminController
   def create
     @dynamic = Page.new(page_params)
     @dynamic.save
+
     redirect_to admin_page_path(@dynamic)
   end
 
   def update
     @dynamic.update(page_params)
+
     redirect_to admin_page_path
   end
 
