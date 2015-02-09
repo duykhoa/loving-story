@@ -14,34 +14,24 @@ section.form-step.hidden#form-step-1
             button type = "button" class= "button-custom primary" id = "next-step-2" Next
 
 section#form-step-2
-  .container#step-2
+  .container
     .row
-      .col-md-3
-        .aside#info-navigation
-          ul.info-list
-            - %w(name story our_relationship timeline photo).each do |info|
-              li
-                = link_to info.humanize, "##{info}"
-
-      .col-md-9
-        .content-wrapper#name
-          .row= render 'service_orders/form/step_2_name', f: f
-
-        .content-wrapper#story
-          .row= render 'service_orders/form/step_2_story', f: f
-
-        .content-wrapper#relationship
-          .row= render 'service_orders/form/step_2_relationship', f: f
-
-        .content-wrapper#photo
-          .row= render 'service_orders/form/step_2_photo', f: f
-
-        .content-wrapper
+      .form-step-wrapper
+        .col-md-12
+          h1 Tell us about your love story
           .row
-            .col-md-4.col-md-offset-1
-              button type = "button" class = "button-custom primary button-previous" id = "previous-step-1" Previous
-            .col-md-4.col-md-offset-1
-              button type = "button" class = "button-custom primary button-next" id = "next-step-3" Next
+            -# WIP
+            .col-md-4.col-xs-6
+            .col-md-4.col-xs-6
+            .clearfix.visible-sm-block
+            .col-md-4.col-xs-12
+
+          .content-wrapper
+            .row
+              .col-md-4.col-md-offset-1
+                button type = "button" class = "button-custom primary button-previous" id = "previous-step-1" Previous
+              .col-md-4.col-md-offset-1
+                button type = "button" class = "button-custom primary button-next" id = "next-step-3" Next
 
 /section#form-step-3
   /.container#step-3
