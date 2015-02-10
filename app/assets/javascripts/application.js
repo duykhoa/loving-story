@@ -11,9 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.storageapi
-//= require StepProgressBar
+//= require bootstrap
 //= require skrollr
+//= require codemirror
+//= require summernote
+//= require StepProgressBar
 //= require homes
 //= require service_orders_new_page
+//= require admin/pages
