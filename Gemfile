@@ -17,7 +17,17 @@ gem 'compass-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'owlcarousel-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
+#
 gem 'devise'
+#Create Semi Static Pages
+gem 'friendly_id'
+#Adding Simple WYSIWYG Editor for create Pages Content
+gem 'summernote-rails'
+gem 'codemirror-rails'
+
+gem 'bootstrap-sass'
+gem 'jquery-turbolinks'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
