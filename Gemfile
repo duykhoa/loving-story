@@ -9,47 +9,39 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
 gem 'compass-rails'
 gem 'font-awesome-sass', '~> 4.2.0'
 gem 'owlcarousel-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
-#
 gem 'devise'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'jasmine-rails'
+  gem 'simplecov', :require => false
 end
 
+# move out sensitive data
 gem 'figaro', '>= 1.0.0.rc1'
+
+# postgres db
 gem 'pg'
+
 gem 'simple_form'
+
 gem 'slim-rails'
+
 gem "paperclip", "~> 4.2"
 gem 'email_validator'
+
+# custom error page
+gem 'gaffe'
 
 group :development do
   gem 'better_errors'
