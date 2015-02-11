@@ -30,12 +30,17 @@ class Admin::PagesController < Admin::AdminController
 
   def destroy
     @dynamic.destroy
+
     redirect_to admin_pages_path
   end
 
   private
     def set_page
-      @dynamic = Page.friendly.find(params[:id])
+      @dynamic = Page.friendly.find(page_id[:id])
+    end
+
+    def page_id
+      params.permit(:id)
     end
 
     def page_params
