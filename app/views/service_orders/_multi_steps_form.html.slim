@@ -1,6 +1,5 @@
 section.form-step.hidden#form-step-1
   .container
-    -# PROGESS BAR
     .row
       .form-step-wrapper
         .col-md-8
@@ -13,7 +12,7 @@ section.form-step.hidden#form-step-1
           .form-action
             button type = "button" class= "button-custom primary" id = "next-step-2" Next
 
-section#form-step-2
+section.form-step.hidden#form-step-2
   .container
     .row
       .form-step-wrapper
@@ -51,17 +50,18 @@ section#form-step-2
                   .col-md-6
                     button type = "button" class = "button-custom primary button-next" id = "next-step-3" Next
 
-/section#form-step-3
-  /.container#step-3
-    /.row
-      /.col-md-8
-        /h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+section.form-step#form-step-3
+  .container
+    .row
+      .form-step-wrapper
+        .col-md-8
+          h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
 
-      /.col-md-4
-        /.domain-wrapper
-          /= render 'service_orders/form/step_3', f: f
-        /.row
-          /.col-md-6
-            /button type = "button" class = "button-custom primary button-previous-step-3" id = "previous-step-2" Previous
-          /.col-md-6
-            /button type = "submit" class = "button-custom primary button-launch" Launch
+        .col-md-4
+          .domain-wrapper
+            = render 'service_orders/form/step_3', f: f
+          .row
+            .col-md-6
+              button type = "button" class = "button-custom primary button-previous-step-3" id = "previous-step-2" Previous
+            .col-md-6
+              button type = "submit" class = "button-custom primary button-launch" Launch
