@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.storageapi
 //= require bootstrap
+//= require StepForm
 //= require skrollr
 //= require codemirror
 //= require summernote

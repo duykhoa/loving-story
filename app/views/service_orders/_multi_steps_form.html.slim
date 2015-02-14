@@ -1,0 +1,73 @@
+section.form-step#step-1
+  .container
+    .row
+      .form-step-wrapper
+        .col-md-8
+          h1 Your information
+          h5 Cras semper dictum lectus ac bibendum. Sed id massa vel lorem laoreet molestie. Nullam vulputate lacus at mauris molestie porttitor.
+
+        .col-md-4
+          .form-wrapper
+            .input-fields
+              = f.input :your_name, label: false, input_html: { placeholder: 'Your name' }
+              = f.input :email, label: false, input_html: { placeholder: 'Your email' }
+          .form-action
+            button type = "button" class= "form-step-button button-custom primary" data-step = '2' Next
+
+section.form-step.hidden#step-2
+  .container
+    .row
+      .form-step-wrapper
+        .col-md-12
+          h1 Tell us about your love story
+          .content-wrapper
+          .row
+            .col-md-4.border.col-xs-6.content-wrapper
+              .field-wrapper
+                = f.input :his_name, label: false, input_html: { placeholder: "His name" }
+              .field-wrapper
+                = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5" }
+            .col-md-4.border.col-xs-6.content-wrapper
+              .field-wrapper
+                = f.input :her_name, label: false, input_html: { placeholder: "Her name" }
+              .field-wrapper
+                = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5" }
+            .clearfix.visible-sm-block
+            .col-md-4.col-xs-12.content-wrapper
+              .field-wrapper
+                = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7" }
+
+          .row
+            .col-md-4.col-xs-6.content-wrapper
+              .file-field-wrapper
+                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select"
+                = f.input :header_image, as: :file, label: false
+
+          .content-wrapper
+            .row
+              .col-md-4.col-md-offset-8.col-sm-12
+                .row
+                  .col-md-6
+                    button type = "button" class = "form-step-button button-custom primary button-previous" data-step = '1' Previous
+                  .col-md-6
+                    button type = "button" class = "form-step-button button-custom primary button-next" data-step = '3' Next
+
+section.form-step.hidden#step-3
+  .container
+    .row
+      .form-step-wrapper
+        .row
+          .col-md-6.col-sm-12
+            h1 Pick your domain
+            h5 Your love story will appear under *.4ever.tenluaweb.com
+
+          .col-md-6.col-sm-12
+            .domain-wrapper
+              = f.input :domain, label: false, input_html: { placeholder: "Domain"}
+              span .4ever.tenluaweb.com
+        .row
+          .col-md-4.col-md-offset-8.col-sm-12
+            .col-md-6
+              button type = "button" class = "form-step-button button-custom primary button-previous-step-3" data-step = '2' Previous
+            .col-md-6
+              button type = "submit" class = "button-custom primary button-launch" Launch
