@@ -1,5 +1,6 @@
 class ServiceOrdersController < ApplicationController
   include ServiceOrdersControllerConcern
+  layout 'application'
 
   before_action :set_service_order, only: [:destroy]
   before_action :set_service_order_for_show_action, only: [:show]
