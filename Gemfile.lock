@@ -41,6 +41,9 @@ GEM
     ast (2.0.0)
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
+    autoprefixer-rails (5.1.3.1)
+      execjs
+      json
     bcrypt (3.1.9)
     better_errors (2.1.0)
       coderay (>= 1.0.0)
@@ -48,6 +51,9 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.3)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -81,6 +87,8 @@ GEM
       activesupport (>= 3.0)
     cocaine (0.5.5)
       climate_control (>= 0.0.3, < 1.0)
+    codemirror-rails (4.8)
+      railties (>= 3.0, < 5)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -119,6 +127,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    docile (1.1.5)
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
@@ -136,8 +145,12 @@ GEM
     ffi (1.9.6)
     figaro (1.0.0)
       thor (~> 0.14)
+    font-awesome-rails (4.3.0.0)
+      railties (>= 3.2, < 5.0)
     font-awesome-sass (4.2.2)
       sass (~> 3.2)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     gaffe (1.0.2)
       rails (>= 3.2.0)
     globalid (0.3.0)
@@ -168,6 +181,9 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     json (1.8.2)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -280,6 +296,11 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slim (3.0.1)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -306,6 +327,8 @@ GEM
       colorize (>= 0.7.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    summernote-rails (0.5.10.2)
+      railties (>= 3.1)
     temple (0.7.5)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -314,6 +337,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    turbolinks (2.5.3)
+      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.0)
@@ -336,6 +361,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
+  bootstrap-sass
   byebug
   capistrano (~> 3.0.1)
   capistrano-bundler
@@ -343,6 +369,7 @@ DEPENDENCIES
   capistrano-rails-console
   capistrano-rvm (~> 0.1.1)
   capybara
+  codemirror-rails
   coffee-rails (~> 4.1.0)
   compass-rails
   database_cleaner
@@ -352,13 +379,16 @@ DEPENDENCIES
   faker
   fancybox2-rails (~> 0.2.8)
   figaro (>= 1.0.0.rc1)
+  font-awesome-rails
   font-awesome-sass (~> 4.2.0)
+  friendly_id
   gaffe
   haml2slim
   html2haml
   jasmine-rails
   jbuilder (~> 2.0)
   jquery-rails
+  jquery-turbolinks
   launchy
   owlcarousel-rails
   paperclip (~> 4.2)
@@ -374,9 +404,11 @@ DEPENDENCIES
   selenium-webdriver
   shoulda-matchers
   simple_form
+  simplecov
   slim-rails
   spring
   spring-commands-rspec
+  summernote-rails
   thin
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
