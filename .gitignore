@@ -81,3 +81,5 @@ pickle-email-*.html
 # Ignore application configuration
 /config/application.yml
 coverage
+#dropbox credential
+/config/dropbox.yml
