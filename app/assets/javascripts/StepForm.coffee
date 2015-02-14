@@ -10,7 +10,6 @@ class StepForm
     @displayNextStep(nextStepItem)
 
   hideCurrentStep: ->
-    console.log @stepFormClass
     $(@stepFormClass).addClass('hidden')
 
   displayNextStep: (nextStepItem)->

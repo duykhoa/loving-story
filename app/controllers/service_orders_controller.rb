@@ -21,14 +21,10 @@ class ServiceOrdersController < ApplicationController
   def create
     @service_order = ServiceOrder.new(service_order_params)
 
-    respond_to do |format|
-      if @service_order.save
-        format.html { redirect_to @service_order, notice: 'Service order was successfully created.' }
-        format.json { render :show, status: :created, location: @service_order }
-      else
-        format.html { render :new }
-        format.json { render json: @service_order.errors, status: :unprocessable_entity }
-      end
+    if @service_order.save
+      redirect_to @service_order, notice: 'Service order was successfully created.'
+    else
+      render :new, layout: "application"
     end
   end
 
