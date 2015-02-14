@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.storageapi
 //= require StepProgressBar
+//= require StepForm
 //= require skrollr
 //= require homes
 //= require service_orders_new_page

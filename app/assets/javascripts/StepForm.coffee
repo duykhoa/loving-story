@@ -1,13 +1,20 @@
 class StepForm
-  constructor: (@stepFormClass, @clickButtonClass, @currentStepItem)
-    $(@clickButtonClass).on 'click', ->
-      nextStepItem = '#step' + $(@).data('step')
-      hideCurrentStep
-      displayNextStep(nextStepItem)
+  constructor: (@stepFormClass, @clickButtonClass) ->
+    $(@clickButtonClass).on 'click', (e) =>
+      target = $(e.currentTarget)
+      nextStepItem = '#step-' + target.data('step')
+      @toggleStep(nextStepItem)
+
+  toggleStep: (nextStepItem) ->
+    @hideCurrentStep()
+    @displayNextStep(nextStepItem)
 
   hideCurrentStep: ->
-    $(@currentStepItem).addClass('hidden')
+    console.log @stepFormClass
+    $(@stepFormClass).addClass('hidden')
 
   displayNextStep: (nextStepItem)->
     $(nextStepItem).removeClass('hidden')
     @currentStepItem = $(nextStepItem)
+
+window.StepForm = StepForm
