@@ -8,7 +8,9 @@ section.form-step#step-1
 
         .col-md-4
           .form-wrapper
-            = render 'service_orders/form/step_1', f: f
+            .input-fields
+              = f.input :your_name, label: false, input_html: { placeholder: 'Your name' }
+              = f.input :email, label: false, input_html: { placeholder: 'Your email' }
           .form-action
             button type = "button" class= "form-step-button button-custom primary" data-step = '2' Next
 
