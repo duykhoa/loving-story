@@ -1,5 +1,4 @@
 class ServiceOrdersController < ApplicationController
-  layout 'service_orders'
   include ServiceOrdersControllerConcern
 
   before_action :set_service_order, only: [:destroy]
@@ -8,12 +7,12 @@ class ServiceOrdersController < ApplicationController
   # GET /service_orders/1
   # GET /service_orders/1.json
   def show
+    render layout: 'service_orders'
   end
 
   # GET /service_orders/new
   def new
     @service_order = ServiceOrder.new
-    render layout: "application"
   end
 
   # POST /service_orders
@@ -22,10 +21,13 @@ class ServiceOrdersController < ApplicationController
     @service_order = ServiceOrder.new(service_order_params)
 
     if @service_order.save
-      redirect_to @service_order, notice: 'Service order was successfully created.'
+      redirect_to action: :thankyou
     else
-      render :new, layout: "application"
+      render :new
     end
+  end
+
+  def thankyou
   end
 
   private
