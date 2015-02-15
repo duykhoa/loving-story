@@ -6,7 +6,9 @@ class ServiceOrder < ActiveRecord::Base
   validates :email, email: true
   validates :domain, uniqueness: true
 
-  has_attached_file :header_image, :styles => { :medium => "1200x800>" }
+  has_attached_file :header_image, :styles => { :medium => "1200x800>" },
+    :storage => :dropbox,
+    :dropbox_credentials => Rails.root.join("config/dropbox.yml")
   validates_attachment_content_type :header_image, :content_type => /\Aimage\/.*\Z/
 
   def short_his_name
@@ -16,5 +18,4 @@ class ServiceOrder < ActiveRecord::Base
   def short_her_name
     her_name.split(" ").first
   end
-
 end

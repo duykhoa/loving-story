@@ -6,6 +6,7 @@ addons:
   postgresql: '9.3'
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - cp config/dropbox.yml.travis config/dropbox.yml
   - bundle exec rake db:create:all
 after_script:
   - RAILS_ENV=test bundle exec rake spec:javascript

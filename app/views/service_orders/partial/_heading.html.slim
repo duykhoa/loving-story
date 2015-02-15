@@ -1,15 +1,16 @@
 #owl-carousel.owl-carousel.owl-theme
-  - 3.times do |i|
-    .item style=("background: url(#{asset_url("service_orders/carousel-#{i+1}.jpg")}) no-repeat center top;")
-      .overlay
-      .content
-        h1.title
-          = @service_order.short_his_name
-          = icon 'heart'
-          = @service_order.short_her_name
-        .welcome
-          | Welcome to #{ @service_order.short_his_name } & #{ @service_order.short_her_name } website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events. Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
-        = link_to "Discover More", '#', class: "button button-primary"
+  / - 3.times do |i|
+    / .item style=("background: url(#{asset_url("service_orders/carousel-#{i+1}.jpg")}) no-repeat center top;")
+  .item style=("background: url(#{asset_url(@service_order.header_image)}) no-repeat center top;")
+    .overlay
+    .content
+      h1.title
+        = @service_order.short_his_name
+        = icon 'heart'
+        = @service_order.short_her_name
+      .welcome
+        | Welcome to #{ @service_order.short_his_name } & #{ @service_order.short_her_name } website where we proudly tell and recored our love story with all its ups and downs with all great moments and happy events. Love Moments are special and it deserve to be recorded and to be always remembered! our loveline is just summerize some of our important and happy moments.
+      = link_to "Discover More", '#', class: "button button-primary"
 nav
   .container
     .row
