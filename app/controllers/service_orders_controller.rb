@@ -22,7 +22,7 @@ class ServiceOrdersController < ApplicationController
     @service_order = ServiceOrder.new(service_order_params)
 
     if @service_order.save
-      redirect_to action: :thankyou
+      redirect_to root_url(subdomain: "#{ @service_order.id }.4ever")
     else
       render :new
     end
