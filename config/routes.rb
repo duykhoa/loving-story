@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get 'thankyou', on: :collection
   end
 
-  match '/' => 'service_orders#show', :constraints => { :subdomain => /.+.4ever/ }, via: [:get]
+  get '/', to: 'service_orders#show', constraints: { subdomain: /.+\.4ever/ }
 
   root to: 'homes#index', subdomain: false
 end

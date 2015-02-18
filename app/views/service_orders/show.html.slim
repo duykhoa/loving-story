@@ -16,3 +16,14 @@ section.social
   = render 'service_orders/partial/social'
 footer
   = render 'service_orders/partial/footer'
+
+- if @service_order.pending?
+  .section#pending-service-order
+    .popup-pending
+      .container.text-left
+        p Hi, #{ @service_order.your_name }!
+        p Thank you for using TenLuaWeb
+        p We are processing your Love Story.
+        p Keep calm and come back in 24 hours.
+        p Best regards,
+        p Khoa Tran
