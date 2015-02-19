@@ -1,6 +1,6 @@
-{<img src="https://travis-ci.org/duykhoa/loving-story.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/duykhoa/loving-story]
+[![Build Status](https://travis-ci.org/duykhoa/loving-story.svg?branch=master)](https://travis-ci.org/duykhoa/loving-story)
 
-== README
+# README
 
 #### Requirement
 1. Rails 4.2rc1
@@ -29,7 +29,7 @@ And your friend can send you some complement and best wish via facebook comment,
 
 #### Copyright by TenLuaWeb 2015. Bug and issue are welcome!
 
-#### Director: Khoa Tran (github.com/duykhoa)
+#### Director: Khoa Tran ([github.com/duykhoa](github.com/duykhoa))
 
 #### Want to contribute? Fork it, and write some codes, create a pull request, we will review and merge! Welcome to join!
 
