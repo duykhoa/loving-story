@@ -11,9 +11,7 @@ Rails.application.routes.draw do
   devise_for :admin_users
   get 'homes/index'
 
-  resources :service_orders, only: [:new, :create, :show, :thankyou] do
-    get 'thankyou', on: :collection
-  end
+  resources :service_orders, only: [:new, :create, :show]
 
   get '/', to: 'service_orders#show', constraints: { subdomain: /.+\.4ever/ }
 
