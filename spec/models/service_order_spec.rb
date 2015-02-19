@@ -1,6 +1,25 @@
 require 'rails_helper'
 
 describe ServiceOrder do
+  DOMAIN_LIST =
+    [
+      'domain',
+      'good-domain',
+      'very-good-domain',
+      'k'*4,
+      'k'*30,
+      'a12345bcd'
+    ]
+
+  INVALID_DOMAIN_LIST =
+    [
+      'Domain',
+      'not_good0domain',
+      'd3$#&',
+      'k'*3,
+      'k'*31
+    ]
+
   it { should validate_presence_of(:his_name) }
   it { should validate_presence_of(:her_name) }
   it { should validate_presence_of(:his_story) }
@@ -9,6 +28,14 @@ describe ServiceOrder do
   it { should validate_presence_of(:your_name) }
   it { should validate_uniqueness_of(:domain) }
   it { should have_attached_file(:header_image) }
+
+  INVALID_DOMAIN_LIST.each do |domain_name|
+    it { should_not allow_value(domain_name).for(:domain) }
+  end
+
+  DOMAIN_LIST.each do |domain_name|
+    it { should allow_value(domain_name).for(:domain) }
+  end
 
   describe "validates status inclusion" do
     let(:service_order) { build(:service_order) }
