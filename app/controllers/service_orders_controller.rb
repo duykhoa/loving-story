@@ -2,7 +2,6 @@ class ServiceOrdersController < ApplicationController
   include ServiceOrdersControllerConcern
   layout 'application'
 
-  before_action :set_service_order, only: [:destroy]
   before_action :set_service_order_for_show_action, only: [:show]
 
   def show
@@ -17,7 +16,7 @@ class ServiceOrdersController < ApplicationController
     @service_order = ServiceOrder.new(service_order_params)
 
     if @service_order.save
-      redirect_to root_url(subdomain: "#{ @service_order.id }.4ever")
+      redirect_to root_url(subdomain: "#{ @service_order.domain }.4ever")
     else
       render :new
     end
@@ -33,6 +32,6 @@ class ServiceOrdersController < ApplicationController
     end
 
     def set_service_order_for_show_action
-      @service_order = ServiceOrder.find service_order_id(request.subdomain)
+      @service_order = ServiceOrder.find_by_domain service_order_id(request.subdomain)
     end
 end
