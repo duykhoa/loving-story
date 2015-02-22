@@ -947,12 +947,14 @@ $.validator.addMethod("filesize", function(value, element, param) {
 	}
 
 	if ($(element).attr("type") === "file") {
-    // TODO: add logic here
+    filesize = $(element)[0].files[0].size / 1024 / 1024
+    filesize_expectation = parseInt(param)
+    if (filesize > filesize_expectation) {
+      return false
+    }
 	}
 
-	// Either return true because we've validated each file, or because the
-	// browser does not support element.files and the FileList feature
-	return false;
+	return true;
 }, $.validator.format("2MB file size limit"));
 
 }));
