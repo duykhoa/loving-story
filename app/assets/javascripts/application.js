@@ -22,4 +22,4 @@
 //= require StepProgressBar
 //= require homes
 //= require service_orders_new_page
-//= require admin/pages
+//= require jquery.validate.min
