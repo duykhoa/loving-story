@@ -40,8 +40,8 @@ section.form-step.hidden#step-2
           .row
             .col-md-4.col-xs-6.content-wrapper
               .file-field-wrapper
-                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", input_html: { disable: true }
-                = f.input :header_image, as: :file, label: false
+                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", input_html: { disabled: true }
+                = f.input :header_image, as: :file, label: false, input_html: { require: '', accept: 'image/*', filesize: '2MB' }
 
           .content-wrapper
             .row
@@ -63,7 +63,7 @@ section.form-step.hidden#step-3
 
           .col-md-6.col-sm-12
             .domain-wrapper
-              = f.input :domain, label: false, input_html: { placeholder: "Domain"}
+              = f.input :domain, label: false, input_html: { placeholder: "Domain", required: '', pattern: '([a-z0-9]|-){4,30}' }
               span .4ever.tenluaweb.com
         .row
           .col-md-4.col-md-offset-8.col-sm-12

@@ -23,3 +23,4 @@
 //= require homes
 //= require service_orders
 //= require jquery.validate.min
+//= require additional-methods
