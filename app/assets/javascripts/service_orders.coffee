@@ -1,19 +1,5 @@
 ready = ->
-  $('#next-step-2').on 'click', (e) ->
-    target = $("#step-2").offset().top
-    scrollTop(target)
-
-  $('#next-step-3').on 'click', (e) ->
-    target = $("#step-3").offset().top
-    scrollTop(target)
-
-  $('#previous-step-1').on 'click', (e) ->
-    target = 0
-    scrollTop(target)
-
-  $('#previous-step-2').on 'click', (e) ->
-    target = $("#step-2").offset().top
-    scrollTop(target)
+  $("#new_service_order").validate()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

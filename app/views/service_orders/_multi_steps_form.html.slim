@@ -9,8 +9,8 @@ section.form-step#step-1
         .col-md-4
           .form-wrapper
             .input-fields
-              = f.input :your_name, label: false, input_html: { placeholder: 'Your name' }
-              = f.input :email, label: false, input_html: { placeholder: 'Your email' }
+              = f.input :your_name, label: false, input_html: { placeholder: 'Your name', required: '', minlength: '2' }
+              = f.input :email, label: false, input_html: { placeholder: 'Your email', required: '' }
           .form-action
             button type = "button" class= "form-step-button button-custom primary" data-step = '2' Next
 
@@ -24,23 +24,23 @@ section.form-step.hidden#step-2
           .row
             .col-md-4.border.col-xs-6.content-wrapper
               .field-wrapper
-                = f.input :his_name, label: false, input_html: { placeholder: "His name" }
+                = f.input :his_name, label: false, input_html: { placeholder: "His name", required: '', minlength: '2', maxlength: '100' }
               .field-wrapper
-                = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5" }
+                = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5", minlength: '5', maxlength: '400' }
             .col-md-4.border.col-xs-6.content-wrapper
               .field-wrapper
-                = f.input :her_name, label: false, input_html: { placeholder: "Her name" }
+                = f.input :her_name, label: false, input_html: { placeholder: "Her name", minlength: '2', maxlength: '100' }
               .field-wrapper
-                = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5" }
+                = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5", minlength: '5', maxlength: '400' }
             .clearfix.visible-sm-block
             .col-md-4.col-xs-12.content-wrapper
               .field-wrapper
-                = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7" }
+                = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7", minlength: '5', maxlength: '1000' }
 
           .row
             .col-md-4.col-xs-6.content-wrapper
               .file-field-wrapper
-                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select"
+                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", input_html: { disable: true }
                 = f.input :header_image, as: :file, label: false
 
           .content-wrapper
