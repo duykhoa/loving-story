@@ -1,7 +1,3 @@
-scrollTop = (targetTop, container = 'body', duration = 700) ->
-  $(container).animate
-    scrollTop: targetTop, duration
-
 ready = ->
   $('#next-step-2').on 'click', (e) ->
     target = $("#step-2").offset().top
