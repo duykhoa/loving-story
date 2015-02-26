@@ -1,0 +1,45 @@
+#process
+  width: 100%
+  z-index: 5
+
+  .container
+    background: white
+    padding: 10px 0
+    padding-bottom: 0
+
+  .wrapper
+    text-align: center
+
+    &:nth-of-type(1)
+      text-align: left
+
+    &:nth-of-type(3)
+      text-align: right
+
+  .step
+    text-align: center
+    border-radius: 100%
+    border: 2px solid #388E3C
+    background: white
+    box-sizing: border-box
+    display: inline-block
+    margin: 0 auto
+    width: 76px
+    height: 76px
+    line-height: 76px
+    font-size: 3.3rem
+
+  .progress-bar
+    height: 3px
+    margin-top: 50px
+    background: #EEE
+
+    #percentage
+      transition: width 0.3s ease-in-out
+      height: 100%
+      width: 0
+      background: #388E3C
+
+  .row.step-wrapper
+    position: relative
+    top: -38px

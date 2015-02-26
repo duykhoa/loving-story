@@ -1,0 +1,7 @@
+test:
+  app_key: "app_key_default"
+  app_secret: "app_secret_travis_ci_test"
+  access_token: "access_token_travis_ci_test"
+  access_token_secret: "access_token_secret_travis_ci_test"
+  user_id: "123456789"
+  access_type: "app_folder"
