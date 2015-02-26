@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   private
+
   def set_page
     @page = Page.friendly.find(page_id[:id])
   end
