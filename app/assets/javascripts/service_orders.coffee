@@ -6,6 +6,25 @@ ready = ->
         minlength: 2
       "service_order[email]":
         minlength: 2
+      "service_order[his_name]":
+        minlength: 2
+        maxlength: 100
+      "service_order[her_name]":
+        minlength: 2
+        maxlength: 100
+      "service_order[his_story]":
+        minlength: 5
+        maxlength: 400
+      "service_order[her_story]":
+        minlength: 5
+        maxlength: 400
+      "service_order[our_relationship]":
+        minlength: 5
+        maxlength: 400
+      "service_order[header_image]":
+        filesize: '2MB'
+      "service_order[domain]":
+        pattern: /^([a-z0-9]){3,20}$/
 
     errorPlacement:
       (error, element) ->

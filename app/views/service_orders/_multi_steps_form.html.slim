@@ -23,24 +23,24 @@ section.form-step.hidden#step-2
           .content-wrapper
           .row
             .col-md-4.border.col-xs-6.content-wrapper
-              .field-wrapper
+              .input-fields
                 = f.input :his_name, label: false, input_html: { placeholder: "His name" }
-              .field-wrapper
+              .input-fields
                 = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5" }
             .col-md-4.border.col-xs-6.content-wrapper
-              .field-wrapper
+              .input-fields
                 = f.input :her_name, label: false, input_html: { placeholder: "Her name" }
-              .field-wrapper
+              .input-fields
                 = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5" }
             .clearfix.visible-sm-block
             .col-md-4.col-xs-12.content-wrapper
-              .field-wrapper
+              .input-fields
                 = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7" }
 
           .row
             .col-md-4.col-xs-6.content-wrapper
               .file-field-wrapper
-                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", input_html: { disabled: true }
+                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", disabled: true
                 = f.input :header_image, as: :file, label: false, input_html: { accept: 'image/*' }
 
           .content-wrapper

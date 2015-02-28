@@ -2,8 +2,8 @@ article#form
   = simple_form_for @service_order do |f|
     = render 'multi_steps_form', f: f
 
-footer.content-wrapper-50p
-  = render 'shared/footer'
+/footer.content-wrapper-50p
+  /= render 'shared/footer'
 
 coffee:
   o = new StepForm('.form-step', '.form-step-button')
