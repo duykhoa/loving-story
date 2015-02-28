@@ -7,3 +7,7 @@ article#form
 
 coffee:
   o = new StepForm('.form-step', '.form-step-button')
+
+  $('#service_order_header_image').on 'change', (e) ->
+    file_name = $(@).val().replace(/C:\\fakepath\\/i, '')
+    $('#faker_image').val(file_name)
