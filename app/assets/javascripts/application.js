@@ -24,3 +24,4 @@
 //= require service_orders
 //= require jquery.validate.min
 //= require additional-methods
+//= require bootstrap-tooltip

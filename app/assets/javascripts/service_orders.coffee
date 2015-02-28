@@ -4,9 +4,23 @@ ready = ->
     rules:
       "service_order[your_name]":
         minlength: 2
+      "service_order[email]":
+        minlength: 2
+
     errorPlacement:
       (error, element) ->
-        console.log error
+        errorDiv = $('<span>', { class: 'error-icon fa fa-exclamation-triangle' })
+        $(errorDiv).tooltip(
+          title: error.text()
+          placement: 'bottom'
+        )
+
+        $(element).parent().children().remove('.error-icon')
+        $(element).parent().append(errorDiv)
+
+    success:
+      (label, element) ->
+        $(element).parent().children().remove('.error-icon')
   )
 
 $(document).ready(ready)
