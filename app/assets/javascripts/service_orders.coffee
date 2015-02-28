@@ -13,6 +13,7 @@ ready = ->
         $(errorDiv).tooltip(
           title: error.text()
           placement: 'bottom'
+          container: 'body'
         )
 
         $(element).parent().children().remove('.error-icon')
