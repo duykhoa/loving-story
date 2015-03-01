@@ -5,7 +5,7 @@ class Admin::ServiceOrdersController < Admin::AdminController
   def index
     @service = ServiceOrder.order("id ASC")
   end
-  
+
   def edit
   end
 
