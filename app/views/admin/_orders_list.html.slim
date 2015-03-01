@@ -12,7 +12,7 @@
         th Status
         th Action
     tbody
-      - @service.each do |order|
+      - paginate @service.each do |order|
         tr
           td = order.email
           td = order.his_name

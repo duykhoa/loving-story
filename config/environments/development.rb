@@ -11,7 +11,7 @@ Rails.application.configure do
 
   # Show full error reports and disable caching.
   # config.consider_all_requests_local = true
-  config.consider_all_requests_local = false # enable gaffe catching exeption
+  config.consider_all_requests_local = true # enable gaffe catching exeption
 
   config.action_controller.perform_caching = false
 
