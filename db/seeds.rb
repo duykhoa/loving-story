@@ -1,6 +1,6 @@
 # create fake data env for development
 unless Rails.env.production?
-  100.times do
+  60.times do
     FactoryGirl.create(:service_order)
   end
 
