@@ -21,5 +21,7 @@
 //= require summernote
 //= require StepProgressBar
 //= require homes
-//= require service_orders_new_page
-//= require admin/pages
+//= require service_orders
+//= require jquery.validate.min
+//= require additional-methods
+//= require bootstrap-tooltip
