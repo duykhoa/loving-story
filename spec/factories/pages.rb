@@ -1,6 +1,8 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
   factory :page do
-    name Faker::Name.name
+    name "page-name"
     content Faker::Lorem.paragraph
   end
 end
