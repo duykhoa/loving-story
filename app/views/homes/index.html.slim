@@ -17,3 +17,8 @@ section#templates.content-wrapper-100p.fixed data-bottom-top = "transform: trans
 
   footer
     = render 'shared/footer'
+
+coffee:
+  s = skrollr.init(
+    smoothScrolling: true
+  )

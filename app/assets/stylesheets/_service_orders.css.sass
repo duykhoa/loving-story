@@ -53,9 +53,35 @@
       h1
         color: #3498db
         font-size: 2em
+
       h5
         line-height: 1.5em
         margin-top: 10px
+
+      input.error
+        border: 1px solid $red
+
+      .input-fields, .file-field-wrapper
+        .input
+          position: relative
+          margin-bottom: 15px
+
+          input
+            outline-color: #3498DB
+
+          .error-icon
+            position: absolute
+            top: 50%
+            transform: translate(0, -50%)
+            right: 5px
+            color: $red
+
+      .file-field-wrapper
+        .input
+          margin-bottom: 0
+
+        .error-icon
+          transform: translate(0, 50%) !important
 
   #step-1
     .container
@@ -63,7 +89,6 @@
         margin-top: 25px
 
       input, textarea
-        margin-top: 17px
         width: 100%
         font-size: 16px
         box-sizing: border-box
@@ -87,8 +112,7 @@
         width: 100%
         height: auto
         padding: 3px
-        border: 2px solid transparent
-        background: #EEE
+        border: 1px solid #DDD
         outline: none
         resize: none
 
@@ -137,13 +161,20 @@
       width: 100%
       height: auto
       padding: 3px
-      border: 1px solid transparent !important
-      background: #EEE
+      border: 1px solid #DDD
       outline: none
       resize: none
 
     .domain-wrapper
       margin-top: 30px
+      position: relative
+
+      .error-icon
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        right: calc(60% + 5px)
+        color: $red
 
     .service_order_domain
       display: inline-block
@@ -164,5 +195,3 @@
 
       &:after
         font-size: 21px
-    input
-      border: 2px solid #7EC4F3

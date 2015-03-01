@@ -23,25 +23,25 @@ section.form-step.hidden#step-2
           .content-wrapper
           .row
             .col-md-4.border.col-xs-6.content-wrapper
-              .field-wrapper
-                = f.input :his_name, label: false, input_html: { placeholder: "His name" }
-              .field-wrapper
-                = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5" }
+              .input-fields
+                = f.input :his_name, label: false, input_html: { placeholder: "His name", required: true }
+              .input-fields
+                = f.input :his_story, label: false, input_html: { placeholder: "His Story", rows: "5", required: true }
             .col-md-4.border.col-xs-6.content-wrapper
-              .field-wrapper
-                = f.input :her_name, label: false, input_html: { placeholder: "Her name" }
-              .field-wrapper
-                = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5" }
+              .input-fields
+                = f.input :her_name, label: false, input_html: { placeholder: "Her name", required: true }
+              .input-fields
+                = f.input :her_story, label: false, input_html: { placeholder: "Her Story", rows: "5", required: true }
             .clearfix.visible-sm-block
             .col-md-4.col-xs-12.content-wrapper
-              .field-wrapper
-                = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7" }
+              .input-fields
+                = f.input :our_relationship, label: false, input_html: { placeholder: "Our Relationship", rows: "7", required: true }
 
           .row
             .col-md-4.col-xs-6.content-wrapper
               .file-field-wrapper
-                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select"
-                = f.input :header_image, as: :file, label: false
+                = text_field_tag :faker_image, nil, placeholder: "Header image - Click to select", disabled: true
+                = f.input :header_image, as: :file, label: false, input_html: { accept: 'image/*', required: true }
 
           .content-wrapper
             .row
@@ -63,11 +63,12 @@ section.form-step.hidden#step-3
 
           .col-md-6.col-sm-12
             .domain-wrapper
-              = f.input :domain, label: false, input_html: { placeholder: "Domain"}
+              = f.input :domain, label: false, input_html: { placeholder: "Domain", required: true }
               span .4ever.tenluaweb.com
         .row
           .col-md-4.col-md-offset-8.col-sm-12
             .col-md-6
               button type = "button" class = "form-step-button button-custom primary button-previous-step-3" data-step = '2' Previous
             .col-md-6
-              button type = "submit" class = "button-custom primary button-launch" Launch
+              = f.submit "Launch"
+              /button type = "submit" class = "button-custom primary button-launch" Launch
