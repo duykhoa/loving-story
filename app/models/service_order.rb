@@ -21,6 +21,6 @@ class ServiceOrder < ActiveRecord::Base
   def self.valid(attrs)
     object = new(attrs)
     object.valid?
-    !object.errors.messages.include?(attrs.keys.first)
+    !object.errors.messages.include?(attrs.keys.first.to_sym)
   end
 end

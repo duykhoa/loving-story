@@ -58,4 +58,23 @@ RSpec.describe ServiceOrdersController, :type => :controller do
     end
   end
 
+  describe "POST valid" do
+    context "returns valid text" do
+      let(:params) { { service_order: { domain: "a-good-domain" } } }
+
+      it "renders text" do
+        post :valid, params
+        expect(response.body).to eq("true")
+      end
+    end
+
+    context "returns invalid text" do
+      let(:params) { { service_order: { domain: "d" } } }
+
+      it "renders text" do
+        post :valid, params
+        expect(response.body).to eq("false")
+      end
+    end
+  end
 end

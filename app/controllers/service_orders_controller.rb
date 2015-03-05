@@ -22,8 +22,8 @@ class ServiceOrdersController < ApplicationController
     end
   end
 
-  def domain_validate
-    ServiceOrder.valid(domain: domain)
+  def valid
+    render text: ServiceOrder.valid(service_order_params)
   end
 
   private
