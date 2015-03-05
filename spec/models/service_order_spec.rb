@@ -81,4 +81,40 @@ describe ServiceOrder do
       end
     end
   end
+
+  describe ".valid" do
+    context "validates a valid domain name" do
+      let(:domain) { 'gooddomain' }
+      let(:domain2) { 'gooddomain-abc' }
+
+      it "returns true" do
+        expect(ServiceOrder.valid(domain: domain)).to be true
+        expect(ServiceOrder.valid(domain: domain2)).to be true
+      end
+    end
+
+    context "validates an invalid domain name" do
+      let(:domain) { 'go##domain' }
+
+      context "format error" do
+        it "returns false" do
+          expect(ServiceOrder.valid(domain: domain)).to be false
+        end
+      end
+
+      context "domain existed" do
+        before do
+          create(:service_order, domain: "exist")
+        end
+
+        it "returns true" do
+          expect(ServiceOrder.valid(domain: "not-exist")).to be true
+        end
+
+        it "returns false" do
+          expect(ServiceOrder.valid(domain: "exist")).to be false
+        end
+      end
+    end
+  end
 end

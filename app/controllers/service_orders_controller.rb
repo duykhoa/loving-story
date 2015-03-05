@@ -22,6 +22,10 @@ class ServiceOrdersController < ApplicationController
     end
   end
 
+  def domain_validate
+    ServiceOrder.valid(domain: domain)
+  end
+
   private
     def set_service_order
       @service_order = ServiceOrder.find(params[:id])

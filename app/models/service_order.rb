@@ -17,4 +17,10 @@ class ServiceOrder < ActiveRecord::Base
   def short_her_name
     her_name.split(" ").first
   end
+
+  def self.valid(attrs)
+    object = new(attrs)
+    object.valid?
+    !object.errors.messages.include?(attrs.keys.first)
+  end
 end
