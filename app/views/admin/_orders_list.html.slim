@@ -4,12 +4,12 @@
   table
     thead
       tr
-        th Email
-        th Your Name
-        th Created At
-        th Status
-        th Domain Name
-        th Actions
+        th.col-email Email
+        th.col-your-name Your Name
+        th.col-created-at Created At
+        th.col-status Status
+        th.col-domain Domain Name
+        th.col-actions Actions
     tbody
       - @service.each do |order|
         tr
@@ -20,6 +20,6 @@
           td = order.domain
           td
             .row
-              = link_to 'Edit', edit_admin_service_order_path(order) 
+              = link_to 'Edit', edit_admin_service_order_path(order)
             .row
               = link_to 'Delete', admin_service_order_path(order), data: {:confirm => 'Are you sure?'}, :method => :delete
