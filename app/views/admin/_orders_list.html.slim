@@ -15,7 +15,7 @@
         tr
           td = order.email
           td = order.your_name
-          td = order.created_at
+          td = order.created_at.strftime("%d/%m/%Y - %H:%M:%S %p")
           td
             == render 'admin/select_list'
           td = order.domain
