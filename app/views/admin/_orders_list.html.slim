@@ -5,21 +5,19 @@
     thead
       tr
         th Email
-        th His name
-        th Her name
-        th His story
-        th Her story
+        th Your Name
+        th Created At
         th Status
-        th Action
+        th Domain Name
+        th Actions
     tbody
       - @service.each do |order|
         tr
           td = order.email
-          td = order.his_name
-          td = order.her_name
-          td = order.his_story
-          td = order.her_story
+          td = order.your_name
+          td = order.created_at
           td = order.status
+          td = order.domain
           td
             .row
               = link_to 'Edit', edit_admin_service_order_path(order)
