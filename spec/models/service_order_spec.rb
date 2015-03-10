@@ -135,7 +135,6 @@ describe ServiceOrder do
 
         before { create:service_order, domain: 'gooddomain' }
 
-
         it "returns false" do
           expect(ServiceOrder.valid(invalid_fields1)).to be false
         end
