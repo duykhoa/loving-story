@@ -3,25 +3,25 @@ class Admin::ServiceOrdersController < Admin::AdminController
   layout 'admin'
 
   def index
-    @service = ServiceOrder.page params[:page]
+    @service_order = ServiceOrder.page params[:page]
   end
 
   def edit
   end
 
   def update
-    @service.update service_order_params
+    @service_order.update service_order_params
     redirect_to admin_service_orders_url
   end
 
   def destroy
-    @service.destroy
+    @service_order.destroy
     redirect_to admin_service_orders_url
   end
 
   private
     def set_service_order
-      @service = ServiceOrder.unscoped.find(params[:id])
+      @service_order = ServiceOrder.unscoped.find(params[:id])
     end
 
     def service_order_params
