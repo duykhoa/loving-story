@@ -12,7 +12,7 @@
         th Status
         th Action
     tbody
-      - @service_order.each do |order|
+      - @service_orders.each do |order|
         tr
           td = order.email
           td = order.his_name
@@ -25,4 +25,4 @@
               = link_to 'Edit', edit_admin_service_order_path(order) 
             .row
               = link_to 'Delete', admin_service_order_path(order), data: {:confirm => 'Are you sure?'}, :method => :delete
-  = paginate @service_order
+  = paginate @service_orders
