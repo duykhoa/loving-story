@@ -3,7 +3,7 @@ class Admin::ServiceOrdersController < Admin::AdminController
   layout 'admin'
 
   def index
-    @service = ServiceOrder.order("id ASC").page params[:page]
+    @service = ServiceOrder.page params[:page]
   end
 
   def edit
