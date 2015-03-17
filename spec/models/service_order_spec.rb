@@ -81,4 +81,68 @@ describe ServiceOrder do
       end
     end
   end
+
+  describe ".valid" do
+    context "validates 1 fields" do
+      context "validates a valid domain name" do
+        let(:domain) { 'gooddomain' }
+        let(:domain2) { 'gooddomain-abc' }
+
+        it "returns true" do
+          expect(ServiceOrder.valid(domain: domain)).to be true
+          expect(ServiceOrder.valid(domain: domain2)).to be true
+        end
+      end
+
+      context "validates an invalid domain name" do
+        let(:domain) { 'go##domain' }
+
+        context "format error" do
+          it "returns false" do
+            expect(ServiceOrder.valid(domain: domain)).to be false
+          end
+        end
+
+        context "domain existed" do
+          before do
+            create(:service_order, domain: "exist")
+          end
+
+          it "returns true" do
+            expect(ServiceOrder.valid(domain: "not-exist")).to be true
+          end
+
+          it "returns false" do
+            expect(ServiceOrder.valid(domain: "exist")).to be false
+          end
+        end
+      end
+    end
+
+    context "validates more fields" do
+      context "validates a valid domain name and email" do
+        let(:valid_fields) { { domain: 'gooddomain', email: 'email@gmail.com' } }
+        subject { ServiceOrder.valid(valid_fields) }
+
+        it "returns true" do
+          expect(subject).to be true
+        end
+      end
+
+      context "validates fail for an existed domain name" do
+        let(:invalid_fields1) { { domain: 'gooddomain', email: 'email@gmail.com' } }
+        let(:invalid_fields2) { { domain: 'gooddomain2', email: 'invalid' } }
+
+        before { create:service_order, domain: 'gooddomain' }
+
+        it "returns false" do
+          expect(ServiceOrder.valid(invalid_fields1)).to be false
+        end
+
+        it "returns false" do
+          expect(ServiceOrder.valid(invalid_fields2)).to be false
+        end
+      end
+    end
+  end
 end
