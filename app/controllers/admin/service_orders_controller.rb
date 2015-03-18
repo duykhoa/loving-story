@@ -3,7 +3,7 @@ class Admin::ServiceOrdersController < Admin::AdminController
   layout 'admin'
 
   def index
-    @service = ServiceOrder.order(created_at: :desc)
+    @service = ServiceOrder.all
   end
 
   def edit
