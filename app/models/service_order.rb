@@ -17,5 +17,4 @@ class ServiceOrder < ActiveRecord::Base
   def short_her_name
     her_name.split(" ").first
   end
-  default_scope {order(created_at: :desc)}
 end
