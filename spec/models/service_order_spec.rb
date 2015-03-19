@@ -82,11 +82,4 @@ describe ServiceOrder do
     end
   end
 
-  describe "default scope" do
-    let!(:order_one){ build(:service_order, created_at: Time.new(2015))}
-    let!(:order_two){ build(:service_order, created_at: Time.new(2016))}
-    it "order by created at" do
-      expect(ServiceOrder.all).to eq([order_two, order_one])
-    end
-  end
 end
