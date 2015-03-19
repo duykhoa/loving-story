@@ -22,6 +22,10 @@ class ServiceOrdersController < ApplicationController
     end
   end
 
+  def valid
+    render text: ServiceOrder.valid(service_order_params)
+  end
+
   private
     def set_service_order
       @service_order = ServiceOrder.find(params[:id])

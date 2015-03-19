@@ -19,4 +19,15 @@ class ServiceOrder < ActiveRecord::Base
   def short_her_name
     her_name.split(" ").first
   end
+
+  def self.valid(attrs)
+    object = new(attrs)
+    object.valid?
+
+    attrs.keys.map(&:to_sym).each do |key|
+      return false if object.errors.messages.include?(key)
+    end
+
+    true
+  end
 end
