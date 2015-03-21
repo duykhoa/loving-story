@@ -1,7 +1,7 @@
 class ServiceOrder < ActiveRecord::Base
   enum status: [ :pending, :approve, :reject]
 
-  default_scope{ order(created_at: :desc) }
+  default_scope { order(created_at: :desc) }
 
   validates :his_name, :her_name, :his_story, :her_story, :our_relationship, :your_name, presence: true
   validates :status, inclusion: { in: statuses, message: 'status is invalid' }, allow_nil: true
