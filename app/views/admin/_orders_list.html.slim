@@ -17,10 +17,10 @@
           td = order.your_name
           td = order.created_at.strftime("%d/%m/%Y - %H:%M:%S %p")
           td
-            - if order.status == "approve"
+            - if order.approve?
               .status.approve
                 = order.status.capitalize
-            - elsif order.status == "reject"
+            - elsif order.reject?
               .status.reject
                 = order.status.capitalize
             - else
