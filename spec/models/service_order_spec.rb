@@ -147,12 +147,8 @@ describe ServiceOrder do
   end
 
   describe "default_scope" do
-    let(:old_order) do
-      FactoryGirl.create(:service_order, created_at: 1.day.ago, domain: "happy")
-    end
-    let(:new_order) do
-      FactoryGirl.create(:service_order, created_at: 1.hour.ago, domain: "mylove")
-    end
+    let(:old_order) { create(:service_order, created_at: 1.day.ago, domain: "happy") }
+    let(:new_order) { create(:service_order, created_at: 1.hour.ago, domain: "mylove") }
 
     it "orders by created time" do
       expect(ServiceOrder.all).to eq([new_order, old_order])

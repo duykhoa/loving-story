@@ -4,19 +4,24 @@ RSpec.describe Admin::ServiceOrdersController, :type => :controller do
   let(:user) { create(:admin_user) }
 
   describe "GET index" do
-    it "responds successfully with an HTTP 200 status code" do
+    before do
       sign_in user
       get :index
-      expect(response).to be_success
-      expect(response).to have_http_status(200)
     end
 
-    it "assigns @service" do
-      sign_in user
-      order1 = FactoryGirl.create(:service_order, domain: "happy")
-      order2 = FactoryGirl.create(:service_order, domain: "mylove")
-      get :index
-      expect(assigns(:service)).to eq([order2, order1])
+    context "get index pages" do
+      it "responds successfully with an HTTP 200 status code" do
+        expect(response).to be_success
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context "get service_orders list" do
+      it "assigns @service" do
+        order1 = create(:service_order, domain: "happy")
+        order2 = create(:service_order, domain: "mylove")
+        expect(assigns(:service)).to eq([order2, order1])
+      end
     end
   end
 
