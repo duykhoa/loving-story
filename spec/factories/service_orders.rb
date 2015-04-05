@@ -10,6 +10,9 @@ FactoryGirl.define do
     our_relationship Faker::Lorem.paragraph
     your_name Faker::Name.name
     status ServiceOrder.statuses.fetch(:pending)
-    domain 'domain'
+
+    sequence :domain do |i|
+      "domain#{i}"
+    end
   end
 end
