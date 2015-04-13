@@ -2,6 +2,8 @@
 
 # README
 
+[![Join the chat at https://gitter.im/duykhoa/loving-story](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/duykhoa/loving-story?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 #### Requirement
 1. Rails 4.2rc1
 2. Ruby 2.2-head
