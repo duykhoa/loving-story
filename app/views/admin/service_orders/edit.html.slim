@@ -9,6 +9,8 @@
     = f.input :her_story
     = f.input :our_relationship
     = f.input :your_name
+    = f.input :status, priority: [:pending], collection: [:pending, :approve, :reject]
+    = f.input :domain
     = f.button :submit
 
   = link_to 'Back', admin_service_orders_path
