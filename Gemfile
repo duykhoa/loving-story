@@ -28,6 +28,8 @@ gem 'codemirror-rails'
 gem 'bootstrap-sass'
 gem 'jquery-turbolinks'
 gem "font-awesome-rails"
+#Adding gem for paginate
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
